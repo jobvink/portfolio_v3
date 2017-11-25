@@ -9,3 +9,12 @@ $white: #fff;
 $primary-gray: #686868;
 $primary-gray-light: #eee;
 $primary-gray-dark: #333;
+
+$computer-width: 1140px;
+$tablet-width: 720px;
+$mobile-width: 540px;
+
+$default-grid:  ( columns: 12, gutter: 5rem);
+$mobile-grid:   ( columns: 12, gutter: 4rem, media: $computer-width );
+$tablet-grid:   ( columns: 12, gutter: 5rem, media: $computer-width );
+$computer-grid: ( columns: 12, gutter: 6rem, media: $computer-width );

@@ -1,27 +1,5 @@
 @import "../vendor/neat/neat";
 
-$computer-width: 1140px;
-$tablet-width: 720px;
-$mobile-width: 540px;
-
-$computer-grid: (
-        columns: 12,
-        gutter: 5rem,
-        media: $computer-width
-);
-
-$tablet-grid: (
-        columns: 12,
-        gutter: 4rem,
-        media: $tablet-width
-);
-
-$mobile-grid: (
-        columns: 12,
-        gutter: 3rem,
-        media: $mobile-width
-);
-
 .container {
   @include grid-container;
 }
