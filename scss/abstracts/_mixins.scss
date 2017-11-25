@@ -51,3 +51,15 @@
     @content;
   }
 }
+
+@mixin media-down($breakpoint, $keys: $grid-breakpoints) {
+    @media all and (max-width: map-get($keys, $breakpoint)){
+      @content;
+    }
+}
+
+@mixin media-up($breakpoint, $keys: $grid-breakpoints) {
+  @media all and (min-width: map-get($keys, $breakpoint)){
+    @content;
+  }
+}
