@@ -1,37 +1,136 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="manifest" href="site.webmanifest">
-        <link rel="apple-touch-icon" href="icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="scss/main.css">
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+<nav>
+    <ul class="nav-left">
+        <li class="name"><a href="#">Job Vink</a></li>
+    </ul>
+    <ul class="nav-right">
+        <li><a href="#">Competenties</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Tijdlijn</a></li>
+    </ul>
+</nav>
+
+<header>
+    <div class="header-text">
+        <h1 class="u-margin-bottom-small">Portfolio</h1>
+        <p>Ik ben een hardwerkende student met liefde voor zijn vak.</p>
+    </div>
+</header>
+<main>
+    <section class="competences">
+        <div class="header">
+            <h2 class="header-primary u-text-center">Competenties</h2>
+            <p class="sub-header-primary u-text-center w-50 m-auto">Hieronder staan alle skills en vaardigheden die ik
+                heb, en alle technieken waar ik mee heb gewerkt. </p>
+        </div>
+        <div class="container">
+            <div class="row py-2">
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/laravel_portfolio.svg" alt="Laravel">
+                    </div>
+                    <div class="competence-description">
+                        <h3>Laravel</h3>
+                        <p>Laravel is een php framework gebouwd op het model – view – controller pattern.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/php_portfolio.svg" alt="PHP">
+                    </div>
+                    <div class="competence-description">
+                        <h3>PHP</h3>
+                        <p>Php is een programeertaal vooral gebruikt voor back-end programmeren.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/javascript_portfolio.svg" alt="Javascript">
+                    </div>
+                    <div class="competence-description">
+                        <h3>Javascript</h3>
+                        <p>Ik heb erg veel gewerkt met webdevelopment en ik ben behendig geworden met javascript.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/css_portfolio.svg" alt="css">
+                    </div>
+                    <div class="competence-description">
+                        <h3>CSS</h3>
+                        <p>Bij webdevelopment is css natuurlijk niet weg te denken.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/html_portfolio.svg" alt="HTML">
+                    </div>
+                    <div class="competence-description">
+                        <h3>HTML</h3>
+                        <p>Ook heb ik ervaring met basis HTML en HTML5.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/react_portfolio.svg" alt="React">
+                    </div>
+                    <div class="competence-description">
+                        <h3>React</h3>
+                        <p>In een dynamische wereld zijn javascript frameworks een must.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 my-1 competence">
+                    <div class="competence-image">
+                        <img src="img/competenties/angular_portfolio.svg" alt="Angular">
+                    </div>
+                    <div class="competence-description">
+                        <h3>Angular</h3>
+                        <p>Een fantastisch framework gemaakt door Google.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
+<script>
+    window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+    ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+-->
+</body>
 </html>

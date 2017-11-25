@@ -1,0 +1,55 @@
+@import "../vendor/neat/neat";
+
+$computer-width: 1140px;
+$tablet-width: 720px;
+$mobile-width: 540px;
+
+$computer-grid: (
+        columns: 12,
+        gutter: 5rem,
+        media: $computer-width
+);
+
+$tablet-grid: (
+        columns: 12,
+        gutter: 4rem,
+        media: $tablet-width
+);
+
+$mobile-grid: (
+        columns: 12,
+        gutter: 3rem,
+        media: $mobile-width
+);
+
+.container {
+  @include grid-container;
+}
+
+.row {
+  max-width: $computer-width;
+  margin: 0 auto;
+  @include not-last {
+    margin-bottom: 3rem;
+  }
+  @include clearfix;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include grid-column($i);
+  }
+}
+
+@each $breakpoint, $grid in (sm: $mobile-grid, md: $tablet-grid, lg: $computer-grid) {
+  @for $i from 1 through 12 {
+    .col-#{$breakpoint}-#{$i} {
+      @include grid-media($grid) {
+        @include grid-column($i);
+      }
+    }
+  }
+}
+
+
+
