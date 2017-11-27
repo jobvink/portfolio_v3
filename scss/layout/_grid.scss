@@ -1,33 +1,29 @@
-@import "../vendor/neat/neat";
+$grid: (
+    columns: 12,
+    breakpoints: $grid-breakpoints,
+    gutter: 5rem
+);
 
-.container {
-  @include grid-container;
+@mixin container {
+    @include clearfix;
+    margin-left: map-get($grid, gutter);
 }
 
-.row {
-  max-width: $computer-width;
-  margin: 0 auto;
-  @include not-last {
-    margin-bottom: 3rem;
-  }
-  @include clearfix;
-}
-
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    @include grid-column($i);
-  }
-}
-
-@each $breakpoint, $grid in (sm: $mobile-grid, md: $tablet-grid, lg: $computer-grid) {
-  @for $i from 1 through 12 {
-    .col-#{$breakpoint}-#{$i} {
-      @include grid-media($grid) {
-        @include grid-column($i);
-      }
+@mixin rows($rows, $type: fluid) {
+    &:nth-child(#{$rows}n+1) {
+        clear: left;
     }
-  }
 }
 
+@mixin col($columns: 12) {
+    width: calc(#{percentage($columns/map-get($grid, columns))} - #{map-get($grid, gutter)});
+    float: left;
+    margin-right: #{map-get($grid, gutter)};
+}
 
+@mixin media($breakpoint, $grid: $grid) {
+    @media all and (max-width: map-get(map-get($grid, breakpoints), $breakpoint)){
+        @content
+    }
+}
 

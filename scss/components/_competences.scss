@@ -1,19 +1,22 @@
 @import "../vendor/neat/neat";
 
 .competences {
+    @include container;
 
   .competence {
     margin-top: 5rem;
     margin-bottom: 5rem;
 
-    @include grid-column(12, $default-grid);
-    @include grid-media($computer-grid) {
-      @include grid-column(6, $computer-grid);
-    }
-
-    &:nth-child(odd) {
-      clear: left;
-    }
+      @include col(4);
+      @include rows(3);
+      @include media(tablet) {
+          @include rows(2);
+          @include col(6);
+      }
+      @include media(mobile) {
+          @include rows(1);
+          @include col(12);
+      }
 
     @include element('image') {
       width: 25%;
