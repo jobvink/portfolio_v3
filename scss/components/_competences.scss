@@ -19,6 +19,7 @@
       @include column(12, $gutter: $gutter);
     }
 
+
     @include element('image') {
       width: 25%;
       display: inline-block;
