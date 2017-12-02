@@ -1,32 +1,17 @@
-@import "../vendor/neat/neat";
 
-.container {
-  @include grid-container;
+@mixin container {
+    max-width: 1200px;
 }
 
-.row {
-  max-width: $computer-width;
-  margin: 0 auto;
-  @include not-last {
-    margin-bottom: 3rem;
-  }
-  @include clearfix;
+@mixin row($justify-content: flex-start, $align-items: flex-start) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: wrap;
 }
 
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    @include grid-column($i);
-  }
-}
-
-@each $breakpoint, $grid in (sm: $mobile-grid, md: $tablet-grid, lg: $computer-grid) {
-  @for $i from 1 through 12 {
-    .col-#{$breakpoint}-#{$i} {
-      @include grid-media($grid) {
-        @include grid-column($i);
-      }
-    }
-  }
+@mixin column($columns: 1, $column-count: 12, $gutter: 5rem) {
+  width: calc(#{percentage($columns/$column-count)} - #{2*$gutter});
 }
 
 

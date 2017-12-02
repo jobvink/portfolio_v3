@@ -6,10 +6,17 @@
   }
 }
 
-@mixin shadow($y, $x: 0, $blur: 6rem) {
-  -webkit-box-shadow: $x $y $blur rgba(black, .4);
-  -moz-box-shadow: $x $y $blur rgba(black, .4);
-  box-shadow: $x $y $blur rgba(black, .4);
+@mixin center-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin shadow($y, $x: 0, $blur: 6rem, $color: rgba(black, .4)) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
 }
 
 @mixin transition($property) {
@@ -61,5 +68,39 @@
 @mixin media-up($breakpoint, $keys: $grid-breakpoints) {
   @media all and (min-width: map-get($keys, $breakpoint)){
     @content;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600px   -   900px:      Tablet Portrait
+900px   -   1200px:     Tablet landscape
+1200px  -   1800px:     desktop (normal styles apply)
+1800px  +               Big desktop
+
+$breakpoint argument choices:
+- Phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media (max-width: 37.5em) { // 600px
+      @content
+    }
+  } @else if($breakpoint == tab-port) {
+    @media (max-width: 56.25em) { // 900px
+      @content
+    }
+  } @else if($breakpoint == tab-land) {
+    @media (max-width: 75em) { // 1200px
+      @content
+    }
+  } @else if($breakpoint == big-desktop) {
+    @media (min-width: 112.5em) { // 1800 px
+      @content
+    }
   }
 }

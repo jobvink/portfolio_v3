@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="nl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="scss/vendor/font-awesome/css/font-awesome.css">
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
@@ -24,14 +25,18 @@
     your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
-<nav>
+<nav class="nav">
     <ul class="nav-left">
         <li class="name"><a href="#">Job Vink</a></li>
     </ul>
+    <input type="checkbox" class="nav__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="nav__button">
+        <span class="nav__icon">&nbsp;</span>
+    </label>
     <ul class="nav-right">
-        <li><a href="#">Competenties</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Tijdlijn</a></li>
+        <li><a href="#section-competences">Competenties</a></li>
+        <li><a href="#section-portfolio">Portfolio</a></li>
+        <li><a href="#section-timeline">Tijdlijn</a></li>
     </ul>
 </nav>
 
@@ -42,12 +47,12 @@
     </div>
 </header>
 <main>
-    <section class="section-competences">
+    <section class="section-competences" id="section-competences">
         <div class="header--secondairy">
             <h2>Competenties</h2>
             <p>Hieronder staan alle skills en vaardigheden die ik heb, en alle technieken waar ik mee heb gewerkt.</p>
         </div>
-        <div class="container">
+        <div>
             <div class="competences">
                 <div class="competence">
                     <div class="competence__image">
@@ -115,7 +120,145 @@
             </div>
         </div>
     </section>
+    <section class="section-portfolio" id="section-portfolio">
+        <div class="header--secondairy">
+            <h2>Portfolio</h2>
+            <p>Een overzicht van al mijn projecten.</p>
+        </div>
+        <div class="portfolios">
+            <a href="#modal1" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/mod1_front.jpg')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>Specialisatie project</h3>
+                    <p>Een reis door het spijsverteringskanaal</p>
+                </div>
+            </a>
+            <a href="#popup" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/mod2_front.jpg')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>Interactive website NOS</h3>
+                    <p>Een kijkje in Noord-Korea</p>
+                </div>
+            </a>
+            <a href="#popup" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/mod3_front.png')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>Virtual reality</h3>
+                    <p>Ervaar het echte werk</p>
+                </div>
+            </a>
+            <a href="#popup" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/mod4_front.png')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>IoT selution in de retail</h3>
+                    <p>Een slimme kledinghanger</p>
+                </div>
+            </a>
+            <a href="#popup" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/mod5_front.png')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>Baat bij bewind</h3>
+                    <p>Persoonlijke website</p>
+                </div>
+            </a>
+            <a href="#popup" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/mod6_front.jpg')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>Pedicure</h3>
+                    <p>Persoonlijke website</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="section-timeline" id="section-timeline">
+        <div class="header--secondairy">
+            <h2>Tijdlijn</h2>
+            <p>Een overzicht van mijn werkervaring.</p>
+        </div>
+        <div class="timelines">
+            <div class="timeline">
+                <div class="timeline__description">
+                    <div class="timeline__content">
+                        <h3>Studentaanhuis - ICT consultent</h3>
+                        <h4>DECEMBER 2015 - OKTOBER 2016</h4>
+                        <p>Bij studentaanhuis kwam ik bij klanten thuis om diverse problemen op te lossen. Dat kon
+                            variëren van e-mail problemen tot nieuwe computers installeren.</p>
+                    </div>
+                </div>
+                <div class="timeline__image">
+                    <img src="img/timeline/studentaanhuis.jpg" alt="Student aan huis logo">
+                </div>
+            </div>
+            <div class="timeline timeline--right">
+                <div class="timeline__description">
+                    <div class="timeline__content">
+                        <h3>Hogeschool Leiden - Administratief medewerker</h3>
+                        <h4>AUGUSTUS 2016</h4>
+                        <p>Tijdens mijn baan bij de gemeente Leiden heb ik meegeholpen aan een inventarisatie van alle
+                            IT faciliteiten, die in beheer zijn van de gemeente Leiden. Bij deze baan was het belangrijk
+                            nauwkeurig te werk te gaan.</p>
+                    </div>
+                </div>
+                <div class="timeline__image">
+                    <img src="img/timeline/gemeente_leiden.jpg" alt="Student aan huis logo">
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+
+<footer>
+    <div class="footer__content">
+        <p class="footer__description">Gemaakt door Job Vink</p>
+        <div class="social-buttons">
+            <div class="social-button">
+                <a target="_blank" href="https://twitter.com/jobvink"><i class="fa fa-twitter"></i></a>
+            </div>
+            <div class="social-button">
+                <a target="_blank" href="https://www.facebook.com/job.vink"><i class="fa fa-facebook"></i></a>
+            </div>
+            <div class="social-button">
+                <a target="_blank" href="https://www.linkedin.com/in/job-vink-64648812b/"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="popup" id="modal1">
+    <div class="popup__close">
+        <a href="#section-portfolio">&nbsp;</a>
+    </div>
+    <div class="popup__content">
+        <h2>Specialisatie project</h2>
+        <p>Een reis door het spijsverteringsstelsel.</p>
+        <img class="img-responsive img-centered" src="img/portfolio/mod1_1.jpg" alt="">
+        <p>Het eerste project dat ik in mijn opleiding gedaan heb, was een project in opdracht van
+            het Boerhaave Museum in Leiden. Wij kregen de opdracht om een interactieve installatie
+            te bouwen voor kinderen tussen de 10 en 14 jaar. Het thema van onze installatie moest
+            gezondheid en lichaam zijn. Mijn projectgroepje heeft er voor gekozen om een reis
+            door het spijsverteringsstelsel te maken.</p>
+        <p>Bij dit project hebben wij intensief nagedacht over de gebruiksvriendelijkheid van onze
+            installatie. Ons doel was om het de kinderen zo makkelijk mogelijk te maken. Dit hebben
+            we gedaan door sterk in te zetten op de gebruiksvriendelijkheid van onze
+            installatie.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7NHE-gKHsx8"
+                frameborder="0" allowfullscreen></iframe>
+        <a type="button" href="#section-portfolio"><i class="fa fa-times"></i> Sluit Project</a>
+    </div>
+</div>
+
 
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"

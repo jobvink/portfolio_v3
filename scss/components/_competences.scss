@@ -1,18 +1,22 @@
-@import "../vendor/neat/neat";
 
 .competences {
+  @include row;
 
   .competence {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    $gutter: 1rem;
+    @include column(4, $gutter: $gutter);
+    display: flex;
+    margin: 5rem $gutter;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 
-    @include grid-column(12, $default-grid);
-    @include grid-media($computer-grid) {
-      @include grid-column(6, $computer-grid);
+    @include respond(tab-port) {
+      @include column(6, $gutter: $gutter);
     }
 
-    &:nth-child(odd) {
-      clear: left;
+    @include respond(phone) {
+      @include column(12, $gutter: $gutter);
     }
 
     @include element('image') {

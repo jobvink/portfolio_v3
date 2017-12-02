@@ -1,0 +1,44 @@
+.timelines {
+  @include container;
+  @include row;
+  position: relative;
+  padding: 10rem 3rem;
+
+  &:before {
+    content: '';
+    @include center-center;
+    width: .5rem;
+    height: 100%;
+    background-color: $gray-1;
+  }
+
+  .timeline {
+    display: flex;
+    text-align: right;
+    align-items: center;
+
+    @include not-last {
+      margin-bottom: 13rem;
+    }
+
+    @include modifier('right') {
+      flex-direction: row-reverse;
+      text-align: left;
+    }
+
+    @include element('description') {
+      width: 35%;
+    }
+
+    @include element('image') {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+        border: 0.5rem solid $gray-1;
+        border-radius: 50%;
+        height: 100%;
+      }
+    }
+  }
+}
