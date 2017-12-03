@@ -62,7 +62,7 @@
       }
 
       @include respond(phone) {
-        height: 7%;
+        height: 5%;
       }
       img {
         border: 0.5rem solid $gray-1;

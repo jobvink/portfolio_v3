@@ -17,7 +17,7 @@
 
   @include transition(all .4s);
 
-  @include element('content') {
+  &__content {
     width: 100%;
     padding: 10rem 15rem;
     background-color: $white;
@@ -32,8 +32,22 @@
       margin: 2rem 0;
     }
 
+    @include respond(tab-land) {
+      padding: 10rem 10rem;
+      iframe {
+        width: 95%;
+      }
+    }
+
+    @include respond(phone) {
+      padding: 10rem 3rem;
+    }
+
     img {
       width: 70%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
     }
 
     h2 {

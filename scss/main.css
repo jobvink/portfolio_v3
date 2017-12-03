@@ -68,6 +68,9 @@ body {
   width: 50%;
   text-align: center;
   margin: auto; }
+  @media (max-width: 56.25em) {
+    .header--secondairy p {
+      width: 90%; } }
 
 .u-margin-bottom-small {
   margin-bottom: .5rem; }
@@ -681,8 +684,19 @@ nav {
     align-items: center; }
     .popup__content * {
       margin: 2rem 0; }
+    @media (max-width: 75em) {
+      .popup__content {
+        padding: 10rem 10rem; }
+        .popup__content iframe {
+          width: 95%; } }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        padding: 10rem 3rem; } }
     .popup__content img {
       width: 70%; }
+      @media (max-width: 56.25em) {
+        .popup__content img {
+          width: 100%; } }
     .popup__content h2 {
       font-size: 4.5rem;
       text-transform: uppercase;
@@ -791,7 +805,7 @@ nav {
           left: 80%; } }
       @media (max-width: 37.5em) {
         .timelines .timeline__image {
-          height: 7%; } }
+          height: 5%; } }
       .timelines .timeline__image img {
         border: 0.5rem solid #e2e2e2;
         border-radius: 50%;
