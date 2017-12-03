@@ -1,44 +1,59 @@
 .popup {
-  $index: 100;
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  $index: 100;
   width: 100%;
   min-height: 100vh;
   z-index: $index;
-
   opacity: 0;
   visibility: hidden;
 
   @include transition(all .4s);
 
   @include element('content') {
-    @include center-center;
-    background-color: $white;
     width: 100%;
-    min-height: 100vh;
-    @include shadow(2rem);
-
     padding: 10rem 15rem;
+    background-color: $white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
-    opacity: 0;
-    @include transition(all .5s .2s);
-  }
+    * {
+      margin: 2rem 0;
+    }
 
-  &:target {
-    opacity: 1;
-    visibility: visible;
-  }
+    img {
+      width: 70%;
+    }
 
-  &:target &__content {
-    opacity: 1;
-    @include transform(translate(-50%, -50%) scale(1));
+    h2 {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      background-image: linear-gradient(to right bottom, #4A1464, #0056BC);
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: 2px;
+
+      & + p {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+    }
   }
 
   @include element('close') {
-    @include transition(all .5s .2s);
-
-    position: fixed;
+    position: absolute;
     z-index: $index + 1;
     right: 6rem;
     top: 3rem;
@@ -51,28 +66,40 @@
       color: white;
 
       &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .2s;
         width: 5rem;
         height: 2px;
         background-image: $primary-gradient;
         display: inline-block;
       }
 
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        transition: all .2s;
-      }
-
       &::before {
         @include transform(rotate(135deg));
-        top: 0;
       }
       &::after {
         @include transform(rotate(-135deg));
-        top: 0;
       }
     }
   }
 
+}
+
+[class*="popup active"] {
+  opacity: 1;
+  visibility: visible;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .popup__content {
+    //opacity: 1;
+  }
+
+}
+
+.modal-open {
+  overflow: hidden;
 }
