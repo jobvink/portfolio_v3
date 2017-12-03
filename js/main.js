@@ -13,7 +13,6 @@ $(window).scroll(function () {
 // $('#modal1').modal('open');
 $('.portfolios').on('click', '.portfolio', function () {
     var modal = $(this).data('modal');
-    console.log(modal);
     var $modal = $(modal);
     $modal.addClass('active');
     var $body = $('body');
