@@ -546,6 +546,7 @@ nav {
   background-color: #333; }
   .footer__content, footer__content {
     max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -605,6 +606,7 @@ nav {
 
 .portfolios {
   max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
@@ -753,6 +755,7 @@ nav {
 
 .timelines {
   max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
