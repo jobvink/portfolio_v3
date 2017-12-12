@@ -6,6 +6,11 @@ header {
 
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
 
+  @include respond(tab-port) {
+    clip-path: none;
+    background-position: center;
+  }
+
   .header-text {
     position: absolute;
     top: 50%;

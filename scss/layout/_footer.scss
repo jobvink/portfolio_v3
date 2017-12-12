@@ -18,22 +18,28 @@
 .social-buttons {
   display: flex;
   .social-button {
+    @include transition(all .4s);
     width: 4rem;
     height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: $black;
     border-radius: 50%;
     margin: 0 1rem;
     a {
+      @include transition(all .4s);
       &:link, &:visited {
         color: $white;
       }
 
       &:hover, &:focus, &:active {
-        color: $primary-gray-light
+        color: $primary-gray-light;
       }
+    }
+
+    &:hover {
+      background-color: $secondairy-color;
     }
   }
 }

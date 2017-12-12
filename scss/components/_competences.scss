@@ -41,6 +41,14 @@
         width: 100%;
       }
 
+      @include respond(phone) {
+        h3 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
     }
 
   }

@@ -43,7 +43,7 @@
       width: 35%;
 
       @include respond(tab-port) {
-        width: 70%;
+        width: 65%;
       }
 
       @include respond(phone) {

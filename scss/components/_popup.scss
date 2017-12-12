@@ -68,35 +68,31 @@
 
   @include element('close') {
     position: absolute;
-    z-index: $index + 1;
     right: 6rem;
-    top: 3rem;
+    top: 4rem;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    transform: translateY(-50%);
+    cursor: pointer;
 
-    a {
-      position: relative;
-      right: 3rem;
-      top: 3rem;
-      margin-top: 3.5rem;
-      color: white;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transition: all .2s;
+      width: 5rem;
+      height: 2px;
+      background-image: $primary-gradient;
+      display: inline-block;
+    }
 
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all .2s;
-        width: 5rem;
-        height: 2px;
-        background-image: $primary-gradient;
-        display: inline-block;
-      }
-
-      &::before {
-        @include transform(rotate(135deg));
-      }
-      &::after {
-        @include transform(rotate(-135deg));
-      }
+    &::before {
+      @include transform(rotate(135deg));
+    }
+    &::after {
+      @include transform(rotate(-135deg));
     }
   }
 

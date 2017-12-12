@@ -24,21 +24,20 @@ $('.portfolios').on('click', '.portfolio', function () {
 });
 
 // Select all links with hashes
-$('a[href*="#"]')
+$('a[data-target*="#"]')
 // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
     .click(function (event) {
         // On-page links
         if (
-            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
             &&
-            location.hostname == this.hostname
+            location.hostname === this.hostname
         ) {
             // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            var target = $(this).data('target');
+            target = target.length ? $(target) : target;
             // Does a scroll target exist?
+            console.log(target);
             if (target.length) {
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
