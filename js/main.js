@@ -10,8 +10,7 @@ $(window).scroll(function () {
     navbackground()
 });
 
-// $('#modal1').modal('open');
-$('.portfolios').on('click', '.portfolio', function () {
+var showModal = function () {
     var modal = $(this).data('modal');
     var $modal = $(modal);
     $modal.addClass('active');
@@ -21,7 +20,11 @@ $('.portfolios').on('click', '.portfolio', function () {
         $body.removeClass('modal-open');
         $modal.removeClass('active');
     })
-});
+};
+
+// Remove links that don't actually link to anything
+$('.portfolios').on('click', '.portfolio', showModal);
+$('.btn--action').on('click', showModal);
 
 // Select all links with hashes
 $('a[data-target*="#"]')

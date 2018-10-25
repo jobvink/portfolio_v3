@@ -1,0 +1,51 @@
+.spotlight {
+  background-color: $tertiairy-color;
+  color: white;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    padding: 5rem 0;
+    text-align: center;
+  }
+  &__content {
+    width: 100%;
+    @include row;
+  }
+
+  &__content-description {
+    @include column(1, 2);
+    @include respond(tab-port) {
+      @include column(1, 1);
+    }
+    padding-bottom: 5rem;
+  }
+
+  &__impression {
+    @include column(1, 2);
+    @include respond(tab-port) {
+      @include column(1, 1);
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80%;
+    }
+  }
+
+  &__action {
+    display: block;
+    width: 100%;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  &__button {
+    display: block;
+    margin: auto;
+    padding: 2rem;
+  }
+}

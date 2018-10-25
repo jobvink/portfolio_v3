@@ -26,6 +26,7 @@
   &:active, &:focus{
     transform: translateY(-1px);
     box-shadow: 0 .5rem 1rem rgba($black, 0.2);
+    outline: 0;
   }
 
   &::after {
@@ -57,6 +58,12 @@
     &::after {
       background-color: $white;
     }
+  }
+
+  @include modifier('action') {
+    color: $primary-gray-dark;
+    display: block;
+    padding: 2rem;
   }
 
 }

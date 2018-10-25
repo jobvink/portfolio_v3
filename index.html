@@ -47,6 +47,24 @@
     </div>
 </header>
 <main>
+    <section class="spotlight">
+        <div class="spotlight__container">
+            <h2 class="spotlight__title">Uitgelicht</h2>
+            <div class="spotlight__content">
+                <div class="spotlight__content-description">
+                    <h3>TVgids.nl</h3>
+                    <p>TVgids.nl is een website die zich richt op content met betrekking tot televisieprogramma's en ondemand content</p>
+                    <p>Tijdens dit project ben ik verantwoordelijk geweest voor de frontend van de website.</p>
+                </div>
+                <div class="spotlight__impression">
+                    <img src="img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
+                </div>
+            </div>
+            <div class="spotlight__action">
+                <button data-modal="#modal9" class="spotlight__button btn btn--action btn--white">Bekijk het project</button>
+            </div>
+        </div>
+    </section>
     <section class="section-competences" id="section-competences">
         <div class="header--secondairy">
             <h2>Competenties</h2>
@@ -117,6 +135,15 @@
                         <p>Een fantastisch framework gemaakt door Google.</p>
                     </div>
                 </div>
+                <div class="competence">
+                    <div class="competence__image">
+                        <img src="img/competenties/nodejs_portfolio.svg" alt="Nodejs">
+                    </div>
+                    <div class="competence__description">
+                        <h3>Nodejs</h3>
+                        <p>Super snelle asynchrone code</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -178,6 +205,24 @@
                 <div class="portfolio__description">
                     <h3>Pedicure</h3>
                     <p>Persoonlijke website</p>
+                </div>
+            </div>
+            <div data-modal="#modal8" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/durf_home.png')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>Durfkatijk</h3>
+                    <p>Website politieke partij</p>
+                </div>
+            </div>
+            <div data-modal="#modal9" class="portfolio">
+                <div class="portfolio__image" style="background-image: url('img/portfolio/tvgids_home.png')">
+                    &nbsp;
+                </div>
+                <div class="portfolio__description">
+                    <h3>TVgids.nl</h3>
+                    <p>Website voor televisie en ondemand content</p>
                 </div>
             </div>
         </div>
@@ -251,7 +296,17 @@
                 <div class="timeline__description">
                     <h3>iSource - Stage</h3>
                     <h4>September 2017 - Januari 2018</h4>
-                    <p>Bij iSource ga ik aan de slag als webdeveloper.</p>
+                    <p>Bij iSource ga ik aan de slag als webdeveloper. Hier heb ik projecten gedaan met symfony en met wordpress</p>
+                </div>
+                <div class="timeline__image">
+                    <img src="img/timeline/isource.jpg" alt="isource">
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline__description">
+                    <h3>iSource - webdeveloper</h3>
+                    <h4>Januari 2018 - Januari 2019</h4>
+                    <p>Grote projecten zoals <a target="_blank" class="link" href="https://tvgids.nl">TVgids.nl</a> en projecten met niewere technieken zoals nodejs</p>
                 </div>
                 <div class="timeline__image">
                     <img src="img/timeline/isource.jpg" alt="isource">
@@ -413,6 +468,37 @@
     </div>
 </div>
 
+<div class="popup" id="modal8" role="dialog" tabindex="-1">
+    <div class="popup__close close">
+        &nbsp;
+    </div>
+    <div class="popup__content">
+        <h2>Durf</h2>
+        <img src="img/portfolio/durf_home.png" alt="Homepagina durfkatwijk">
+        <p>Begin 2018 waren er gemeenteraadsverkiezingen, een van de deelnemende partijen bij de verkiezingen in mijn dorp was DURF. Deze partij is opgericht door een oude schoolvriend van mij, toen de gemeenteraadsverkiezingen in de buurt kwamen had de partij een website die wel wat verbeterpunten kon gebruiken. Ik heb besloten mijn hulp aan te bieden en ben sinds dien verantwoordelijk voor het beheer van de website van de partij.</p>
+        <p>Het meest interessante aan dit project vond ik de wijze waarmee ik de doelgroep heb bepaald. Aan het begin van het project had ik moeite met het inschatten van de doelgroep omdat de partij nog niet eerder mee had gedaan aan de verkiezingen en dus nog geen statistiek had van welke mensen in Katwijk op DURF stemde. Daarom heb ik gekeken naar die demografie van katwijk en heb ik vervolgens gekeken naar de google analytics om de doelgroep beter te definiëren. Op deze iteratieve manier van werken kon ik een veel betere website neer zetten.</p>
+        <img src="/img/portfolio/durf_google_analytics.png" alt="Statestiek durfkatijk">
+        <p>Ik heb deze website gebouwd in php met het symfonie framework.</p>
+        <a target="_blank" class="close btn btn--default" href="https://durfkatwijknl">Bekijk de website</a>
+        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+    </div>
+</div>
+
+<div class="popup" id="modal9" role="dialog" tabindex="-1">
+    <div class="popup__close close">
+        &nbsp;
+    </div>
+    <div class="popup__content">
+        <h2>TVgids.nl</h2>
+        <img src="img/portfolio/tvgids_home.png" alt="Homepagina van tvgids.nl">
+        <p>Bij mijn mijn bij isource is een van de projecten die waar ik aan gewerkt heb het vernieuwen van tvgids.nl. Dit is een van de meest bezochte nederlandse websites en ik ben ook erg trots dat ik hier aan mee heb mogen helpen.</p>
+        <p>Binnen het project ben ik verantwoordelijk geweest voor de frontend van de website. Toen we de ontwerpen binnen kregen bij isource kon ik ook niet wachten om de verschillende componenten uit te denken.</p>
+        <img src="img/portfolio/tvgids_component.png" alt="Component uit tvgids.nl">
+        <p>Binnen het project hebben we er bijvoorbeeld voor gekozen om te werken met scss en een vaste naamgeving van classes aan te houden. De methode die we aangehouden hebben heet BEM en zorgt er voor dat er niet alleen beter nagedacht wordt over de structuur van html maar ook voor herbruikbare componenten.</p>
+        <img src="img/portfolio/BEM.png" style="width: 400px" alt="BEM methode">
+        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+    </div>
+</div>
 
 <script src="js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"

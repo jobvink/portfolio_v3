@@ -76,6 +76,12 @@ body {
       width: 90%;
       font-size: 1.5rem; } }
 
+.link, .link:visited, .link:active {
+  color: #0056BC;
+  text-decoration: none; }
+.link:focus, .link:hover {
+  color: #4A1464; }
+
 .u-margin-bottom-small {
   margin-bottom: .5rem; }
 
@@ -596,6 +602,55 @@ nav {
     .social-buttons .social-button:hover {
       background-color: #0056BC; }
 
+.spotlight {
+  background-color: #324085;
+  color: white; }
+  .spotlight__container {
+    max-width: 1200px;
+    margin: auto; }
+  .spotlight__title {
+    padding: 5rem 0;
+    text-align: center; }
+  .spotlight__content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap; }
+  .spotlight__content-description {
+    width: calc(50% - 5rem);
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    padding-bottom: 5rem; }
+    @media (max-width: 56.25em) {
+      .spotlight__content-description {
+        width: calc(100% - 5rem);
+        margin-left: 2.5rem;
+        margin-right: 2.5rem; } }
+  .spotlight__impression {
+    width: calc(50% - 5rem);
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 56.25em) {
+      .spotlight__impression {
+        width: calc(100% - 5rem);
+        margin-left: 2.5rem;
+        margin-right: 2.5rem; } }
+    .spotlight__impression img {
+      width: 80%; }
+  .spotlight__action {
+    display: block;
+    width: 100%;
+    padding-bottom: 5rem;
+    padding-top: 5rem; }
+  .spotlight__button {
+    display: block;
+    margin: auto;
+    padding: 2rem; }
+
 .competences {
   display: flex;
   justify-content: flex-start;
@@ -603,6 +658,8 @@ nav {
   flex-wrap: wrap; }
   .competences .competence {
     width: calc(33.3333333333% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
     display: flex;
     margin: 5rem 1rem;
     align-items: center;
@@ -610,10 +667,14 @@ nav {
     text-align: center; }
     @media (max-width: 56.25em) {
       .competences .competence {
-        width: calc(50% - 2rem); } }
+        width: calc(50% - 2rem);
+        margin-left: 1rem;
+        margin-right: 1rem; } }
     @media (max-width: 37.5em) {
       .competences .competence {
-        width: calc(100% - 2rem); } }
+        width: calc(100% - 2rem);
+        margin-left: 1rem;
+        margin-right: 1rem; } }
     .competences .competence__image {
       width: 25%;
       display: inline-block;
@@ -649,6 +710,8 @@ nav {
   .portfolios .portfolio {
     text-decoration: none;
     width: calc(33.3333333333% - 4rem);
+    margin-left: 2rem;
+    margin-right: 2rem;
     display: flex;
     flex-direction: column;
     margin: 2.5rem 2rem;
@@ -664,10 +727,14 @@ nav {
     color: #686868; }
     @media (max-width: 56.25em) {
       .portfolios .portfolio {
-        width: calc(50% - 4rem); } }
+        width: calc(50% - 4rem);
+        margin-left: 2rem;
+        margin-right: 2rem; } }
     @media (max-width: 37.5em) {
       .portfolios .portfolio {
-        width: calc(100% - 4rem); } }
+        width: calc(100% - 4rem);
+        margin-left: 2rem;
+        margin-right: 2rem; } }
     .portfolios .portfolio:hover {
       cursor: pointer;
       -webkit-transform: scale(1.05);
@@ -865,7 +932,8 @@ nav {
     opacity: 0; }
 .btn:active, .btn:focus {
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  outline: 0; }
 .btn::after {
   content: "";
   display: inline-block;
@@ -887,6 +955,10 @@ nav {
   color: #e2e2e2; }
   .btn--white::after {
     background-color: #fff; }
+.btn--action {
+  color: #333;
+  display: block;
+  padding: 2rem; }
 
 .btn-text:link, .btn-text:visited {
   color: #4A1464;
