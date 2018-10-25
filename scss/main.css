@@ -89,15 +89,17 @@ body {
   text-align: center; }
 
 header {
-  background-image: linear-gradient(to right bottom, rgba(74, 20, 100, 0.7), rgba(0, 86, 188, 0.7)), url("../img/header.jpg");
-  background-size: cover;
-  height: 90vh;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); }
-  @media (max-width: 56.25em) {
-    header {
-      clip-path: none;
-      background-position: center; } }
+  background-color: #324085; }
+  header .header__background {
+    background-image: linear-gradient(to right bottom, rgba(74, 20, 100, 0.7), rgba(0, 86, 188, 0.7)), url("../img/header.jpg");
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%); }
+    @media (max-width: 56.25em) {
+      header .header__background {
+        clip-path: none;
+        background-position: center; } }
   header .header-text {
     position: absolute;
     top: 50%;
