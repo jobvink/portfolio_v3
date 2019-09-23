@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Syntax - raspberry pi workshop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        pre {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-left: 3px solid #0094FF;
+            color: #666;
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 1.6em;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+        }
+        main {
+            max-width: 900px;
+            margin: auto;
+            display: block;
+        }
+        h1 {
+            font-family: 'Roboto' , sans-serif;
+            font-weight: bold;
+            font-size: 54px;
+        }
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            margin-top: 48px;
+        }
+        h4 {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
+        h4 + pre {
+            margin-top: 0;
+        }
+        .syntax {
+            color: #0094FF;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1><span class="syntax">Synax</span> raspberry pi workshop</h1>
+    <h3>1. Programma lijst ophalen</h3>
+    <pre>sudo apt-get update</pre>
+    <pre>sudo apt-get upgrade</pre>
+    <h3>2. Toevoegen van de applicatie aan apt</h3>
+    <pre>sudo apt-get install apt-transport-https</pre>
+    <pre>curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -</pre>
+    <pre>echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list</pre>
+    <pre>sudo apt-get update</pre>
+    <h3>3. instaleren van de plex server</h3>
+    <pre>sudo apt-get install plexmediaserver</pre>
+    <h3>4. Wijzigen van instellingen</h3>
+    <pre>sudo nano /etc/default/plexmediaserver</pre>
+    <h4>Vervang:</h4>
+    <pre>export PLEX_MEDIA_SERVER_USER=plex</pre>
+    <h4>voor:</h4>
+    <pre>export PLEX_MEDIA_SERVER_USER=pi</pre>
+    <h3>5. Herstart de server</h3>
+    <pre>sudo systemctl restart plexmediaserver</pre>
+    <h3>6. Bekijk het resultaat</h3>
+    <pre>192.168.1.100:32400/web/</pre>
+</main>
+</body>
+</html>
