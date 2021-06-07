@@ -5,3 +5,4 @@
 *.DS_Store
 img/competenties/raw
 resources/
+node_modules/

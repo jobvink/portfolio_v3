@@ -1,15 +1,3 @@
-var navbackground = function () {
-    if ($(window).scrollTop() > 150) {
-        $('nav').css('background', 'black');
-    } else {
-        $('nav').css('background', 'transparent');
-    }
-};
-navbackground();
-$(window).scroll(function () {
-    navbackground()
-});
-
 var showModal = function () {
     var modal = $(this).data('modal');
     var $modal = $(modal);

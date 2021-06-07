@@ -12,7 +12,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="scss/main.css?v=1.1.2">
+    <link rel="stylesheet" href="css/main.css?v=1.1.2">
     <link rel="stylesheet" href="scss/vendor/font-awesome/css/font-awesome.css">
 
     <!-- fonts -->
@@ -24,507 +24,677 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience and security.</p>
 <![endif]-->
+<div class="flex">
+    <nav class="w-25 bg-purple-700 px-3 py-8">
+        <ul class="mb-4">
+            <li class="name"><a href="#">Job Vink</a></li>
+        </ul>
+        <input class="" type="checkbox" id="navi-toggle">
+        <label class="" for="navi-toggle">
+            <span class="">&nbsp;</span>
+        </label>
+        <ul class="mt-4">
+            <li class="py-2 font-bold text-white hover:text-purple-300 focus:text-purple-300"><a
+                href="#section-portfolio">Portfolio</a></li>
+            <li class="py-2 font-bold text-white hover:text-purple-300 focus:text-purple-300"><a
+                href="#section-timeline">Tijdlijn</a></li>
+            <li class="py-2 font-bold text-white hover:text-purple-300 focus:text-purple-300"><a
+                href="#section-competences">Competenties</a></li>
+        </ul>
+    </nav>
+    <div>
 
-<nav class="nav">
-    <ul class="nav-left">
-        <li class="name"><a href="#">Job Vink</a></li>
-    </ul>
-    <input type="checkbox" class="nav__checkbox" id="navi-toggle">
-    <label for="navi-toggle" class="nav__button">
-        <span class="nav__icon">&nbsp;</span>
-    </label>
-    <ul class="nav-right">
-        <li><a data-target="#section-portfolio" href="#">Portfolio</a></li>
-        <li><a data-target="#section-timeline" href="#">Tijdlijn</a></li>
-        <li><a data-target="#section-competences" href="#">Competenties</a></li>
-    </ul>
-</nav>
+        <header class="px-16 mt-64">
+            <img class="rounded-full w-64 mb-8" src="img/profiel_foto_square_small.png" alt="Job Vink">
+            <h1 class="font-bold text-6xl">Portfolio</h1>
+            <p class="font-bold text-lg">Ik ben een hardwerkende student met liefde voor zijn vak.</p>
+        </header>
+        <main>
+            <section class="bg-purple-700 px-4 py-4 rounded-md mx-16 mt-16 text-white">
+                <h2 class="font-bold text-2xl">Uitgelicht</h2>
+                <div class="flex">
+                    <div class="w-5/6 pr-8">
+                        <p class="pt-2">TVgids.nl is een website die zich richt op content met betrekking tot
+                            televisieprogramma's en ondemand content Tijdens dit project ben ik verantwoordelijk geweest
+                            voor de frontend van de website.</p>
+                        <button class="mt-4 btn btn--purple" data-modal="#modal9">
+                            Bekijk het project
+                        </button>
+                    </div>
+                    <div class="w-1/6">
+                        <img src="img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
+                    </div>
+                </div>
+            </section>
+            <hr class="h-0.5 rounded-full m-16 bg-purple-400">
+            <section class="px-16" id="section-portfolio">
+                <h2 class="font-bold text-4xl mb-2">Opdrachten</h2>
+                <p class="text-base">Een overzicht van al mijn projecten.</p>
+                <div class="grid grid-cols-3 gap-x-4 gap-y-8 mt-16">
+                    <div class="bg-purple-200" data-modal="#modal10">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/floating_lab_front.jpg"
+                                 alt="Floating lab">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Floating lab</h3>
+                            <p>Zelf varende boot in samenwerking met Port of Rotterdam</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal9">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/tvgids_home.png" alt="TVgids.nl">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">TVgids.nl</h3>
+                            <p>Website voor televisie en ondemand content</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal8">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/durf_home.png" alt="Durfkatijk">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Durfkatijk</h3>
+                            <p>Website politieke partij</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal6">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/mod6_front.jpg" alt="Pedicure">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Pedicure</h3>
+                            <p>Persoonlijke website</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal5">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/mod5_front.png"
+                                 alt="Baat bij bewind">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Baat bij bewind</h3>
+                            <p>Persoonlijke website</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal4">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/mod4_front.jpg"
+                                 alt="IoT selution in de retail">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">IoT selution in de retail</h3>
+                            <p>Een slimme kledinghanger</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal3">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/mod3_front.jpg"
+                                 alt="Virtual reality">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Virtual reality</h3>
+                            <p>Ervaar het echte werk</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal2">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/mod2_front.jpg"
+                                 alt="Interactive website NOS">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Interactive website NOS</h3>
+                            <p>Een kijkje in Noord-Korea</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-200" data-modal="#modal1">
+                        <div class="p-4">
+                            <img class="w-full h-52 object-cover" src="img/portfolio/mod1_front.jpg"
+                                 alt="Specialisatie project">
+                        </div>
+                        <div class="pt-2 px-4 pb-8">
+                            <h3 class="font-bold text-xl mt-2">Specialisatie project</h3>
+                            <p>Een reis door het spijsverteringskanaal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="h-0.5 rounded-full m-16 bg-purple-400">
+            <section class="px-4 py-4 px-16" id="section-timeline">
+                <h2 class="font-bold text-4xl mb-2">Tijdlijn</h2>
+                <p class="font-bold text-lg">Een overzicht van mijn werkervaring.</p>
+                <div class="timelines relative">
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>isource - webdeveloper</h3>
+                            <h4>Januari 2018 - Januari 2019</h4>
+                            <p>Grote projecten zoals <a target="_blank" class="link"
+                                                        href="https://tvgids.nl">TVgids.nl</a> en projecten met niewere
+                                technieken zoals nodejs</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/isource.jpg" alt="isource">
+                    </div>
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>isource - Stage</h3>
+                            <h4>September 2017 - Januari 2018</h4>
+                            <p>Bij isource ga ik aan de slag als webdeveloper. Hier heb ik projecten gedaan met symfony
+                                en met wordpress</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/isource.jpg" alt="isource">
+                    </div>
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>Gemeente Leiden - Inventarisatiemedewerker</h3>
+                            <h4>Augustus 2017</h4>
+                            <p>Tijdens mijn baan bij de gemeente Leiden heb ik meegeholpen aan een
+                                inventarisatie van alle IT faciliteiten, die in beheer zijn van de gemeente Leiden.
+                                Bij deze baan was het belangrijk nauwkeurig te werk te gaan.</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/gemeente_leiden.jpg"
+                             alt="Gemeente Leiden">
+                    </div>
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>Hogeschool Leiden - Student-assistent</h3>
+                            <h4>September 2016 - April 2017</h4>
+                            <p>Als student-assistent ben ik mede verantwoordelijk voor het geven van
+                                een aantal werkcolleges aan eerstejaars studenten.</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/hogeschool_leiden.png"
+                             alt="Hogeschool Leiden">
+                    </div>
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>Hogeschool Leiden - Administratief medewerker</h3>
+                            <h4>Augustus 2016</h4>
+                            <p>Als medewerker heb ik geholpen bij het vervangen van hardeschijven
+                                en RAM-geheugen in ongeveer 3000 computers en werkplekken in de Hogeschool.</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/hogeschool_leiden.png"
+                             alt="Hogeschool Leiden">
+                    </div>
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>Studentaanhuis - ICT consultent</h3>
+                            <h4>December 2015 - Oktober 2016</h4>
+                            <p>Bij studentaanhuis kwam ik bij klanten thuis om diverse problemen
+                                op te lossen. Dat kon variëren van e-mail problemen tot nieuwe computers
+                                installeren.</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/studentaanhuis.jpg"
+                             alt="Studentaanhuis">
+                    </div>
+                    <div class="flex mb-4 items-center">
+                        <div class="prose">
+                            <h3>Flora Holland - Logistiek medewerker</h3>
+                            <h4>Juli 2014</h4>
+                            <p>Mijn eerste baan was bij Flora Holland. Hier heb ik bloemen
+                                verplaatst van de ene naar de andere afdeling om ervoor te zorgen dat de bloemen bij de
+                                juiste
+                                klant
+                                afgeleverd werden.</p>
+                        </div>
+                        <img class="border-4 border-gray-400 rounded-full" src="img/timeline/flora_holland.jpg"
+                             alt="Flora Holland">
+                    </div>
+                </div>
+            </section>
+            <hr class="h-0.5 rounded-full m-16 bg-purple-400">
+            <section class="px-16" id="section-competences">
+                <h2 class="font-bold text-4xl mb-2">Competenties</h2>
+                <p class="text-base">Hieronder staan alle skills en vaardigheden die ik heb, en alle technieken waar ik
+                    mee heb
+                    gewerkt.</p>
+                <div>
+                    <div class="grid gap-x-4 gap-y-8 grid-cols-4">
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/laravel_portfolio.svg" alt="Laravel">
+                            <div class="prose">
+                                <h3 class="font-bold">Laravel</h3>
+                                <p>Laravel is een php framework gebouwd op het model – view – controller pattern.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/php_portfolio.svg" alt="PHP">
+                            <div class="prose">
+                                <h3 class="font-bold">PHP</h3>
+                                <p>Php is een programeertaal vooral gebruikt voor back-end programmeren.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/javascript_portfolio.svg" alt="Javascript">
+                            <div class="prose">
+                                <h3 class="font-bold">Javascript</h3>
+                                <p>Ik heb erg veel gewerkt met webdevelopment en ik ben behendig geworden met
+                                    javascript.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/css_portfolio.svg" alt="css">
+                            <div class="prose">
+                                <h3 class="font-bold">CSS</h3>
+                                <p>Bij webdevelopment is css natuurlijk niet weg te denken.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/html_portfolio.svg" alt="HTML">
+                            <div class="prose">
+                                <h3 class="font-bold">HTML</h3>
+                                <p>Ook heb ik ervaring met basis HTML en HTML5.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/react_portfolio.svg" alt="React">
+                            <div class="prose">
+                                <h3 class="font-bold">React</h3>
+                                <p>In een dynamische wereld zijn javascript frameworks een must.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/angular_portfolio.svg" alt="Angular">
+                            <div class="prose">
+                                <h3 class="font-bold">Angular</h3>
+                                <p>Een fantastisch framework gemaakt door Google.</p>
+                            </div>
+                        </div>
+                        <div class="p-2">
+                            <img class="w-full p-8" src="img/competenties/nodejs_portfolio.svg" alt="Nodejs">
+                            <div class="prose">
+                                <h3 class="font-bold">Nodejs</h3>
+                                <p>Super snelle asynchrone code</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="flex justify-between px-16 py-4 bg-purple-700 mt-16">
+            <p class="text-white">Gemaakt door Job Vink</p>
+            <div class="flex space-x-4">
+                <a class="w-8 h-8 rounded-full block bg-white text-center leading-8" target="_blank"
+                   href="https://twitter.com/jobvink"><i class="fa fa-twitter"></i></a>
+                <a class="w-8 h-8 rounded-full block bg-white text-center leading-8" target="_blank"
+                   href="https://www.facebook.com/job.vink"><i class="fa fa-facebook"></i></a>
+                <a class="w-8 h-8 rounded-full block bg-white text-center leading-8" target="_blank"
+                   href="https://www.linkedin.com/in/job-vink-64648812b/"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </footer>
 
-<header>
-    <div class="header__background">
-        <div class="header-text">
-            <h1>Portfolio</h1>
-            <p>Ik ben een hardwerkende student met liefde voor zijn vak.</p>
-        </div>
-    </div>
-</header>
-<main>
-    <section class="spotlight">
-        <div class="spotlight__container">
-            <h2 class="spotlight__title">Uitgelicht</h2>
-            <div class="spotlight__content">
-                <div class="spotlight__content-description">
-                    <h3>TVgids.nl</h3>
-                    <p>TVgids.nl is een website die zich richt op content met betrekking tot televisieprogramma's en ondemand content</p>
-                    <p>Tijdens dit project ben ik verantwoordelijk geweest voor de frontend van de website.</p>
-                </div>
-                <div class="spotlight__impression">
-                    <img src="img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
-                </div>
-            </div>
-            <div class="spotlight__action">
-                <button data-modal="#modal9" class="spotlight__button btn btn--action btn--white">Bekijk het project</button>
-            </div>
-        </div>
-    </section>
-    <section class="section-portfolio" id="section-portfolio">
-        <div class="header--secondairy">
-            <h2>Portfolio</h2>
-            <p>Een overzicht van al mijn projecten.</p>
-        </div>
-        <div class="portfolios">
-            <div data-modal="#modal10" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/floating_lab_front.jpg')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Floating lab</h3>
-                    <p>Zelf varende boot in samenwerking met Port of Rotterdam</p>
-                </div>
-            </div>
-            <div data-modal="#modal9" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/tvgids_home.png')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>TVgids.nl</h3>
-                    <p>Website voor televisie en ondemand content</p>
-                </div>
-            </div>
-            <div data-modal="#modal8" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/durf_home.png')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Durfkatijk</h3>
-                    <p>Website politieke partij</p>
-                </div>
-            </div>
-            <div data-modal="#modal6" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/mod6_front.jpg')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Pedicure</h3>
-                    <p>Persoonlijke website</p>
-                </div>
-            </div>
-            <div data-modal="#modal5" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/mod5_front.png')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Baat bij bewind</h3>
-                    <p>Persoonlijke website</p>
-                </div>
-            </div>
-            <div data-modal="#modal4" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/mod4_front.png')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>IoT selution in de retail</h3>
-                    <p>Een slimme kledinghanger</p>
-                </div>
-            </div>
-            <div data-modal="#modal3" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/mod3_front.PNG')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Virtual reality</h3>
-                    <p>Ervaar het echte werk</p>
-                </div>
-            </div>
-            <div data-modal="#modal2" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/mod2_front.jpg')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Interactive website NOS</h3>
-                    <p>Een kijkje in Noord-Korea</p>
-                </div>
-            </div>
-            <div data-modal="#modal1" class="portfolio">
-                <div class="portfolio__image" style="background-image: url('img/portfolio/mod1_front.jpg')">
-                    &nbsp;
-                </div>
-                <div class="portfolio__description">
-                    <h3>Specialisatie project</h3>
-                    <p>Een reis door het spijsverteringskanaal</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-timeline" id="section-timeline">
-        <div class="header--secondairy">
-            <h2>Tijdlijn</h2>
-            <p>Een overzicht van mijn werkervaring.</p>
-        </div>
-        <div class="timelines">
-            <div class="timeline">
-                <div class="timeline__description">
-                    <h3>isource - webdeveloper</h3>
-                    <h4>Januari 2018 - Januari 2019</h4>
-                    <p>Grote projecten zoals <a target="_blank" class="link" href="https://tvgids.nl">TVgids.nl</a> en projecten met niewere technieken zoals nodejs</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/isource.jpg" alt="isource">
-                </div>
-            </div>
-            <div class="timeline timeline--right">
-                <div class="timeline__description">
-                    <h3>isource - Stage</h3>
-                    <h4>September 2017 - Januari 2018</h4>
-                    <p>Bij isource ga ik aan de slag als webdeveloper. Hier heb ik projecten gedaan met symfony en met wordpress</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/isource.jpg" alt="isource">
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline__description">
-                    <h3>Gemeente Leiden - Inventarisatiemedewerker</h3>
-                    <h4>Augustus 2017</h4>
-                    <p>Tijdens mijn baan bij de gemeente Leiden heb ik meegeholpen aan een
-                        inventarisatie van alle IT faciliteiten, die in beheer zijn van de gemeente Leiden.
-                        Bij deze baan was het belangrijk nauwkeurig te werk te gaan.</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/gemeente_leiden.jpg" alt="Gemeente Leiden">
-                </div>
-            </div>
-            <div class="timeline timeline--right">
-                <div class="timeline__description">
-                    <h3>Hogeschool Leiden - Student-assistent</h3>
-                    <h4>September 2016 - April 2017</h4>
-                    <p>Als student-assistent ben ik mede verantwoordelijk voor het geven van
-                        een aantal werkcolleges aan eerstejaars studenten.</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/hogeschool_leiden.png" alt="Hogeschool Leiden">
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline__description">
-                    <h3>Hogeschool Leiden - Administratief medewerker</h3>
-                    <h4>Augustus 2016</h4>
-                    <p>Als medewerker heb ik geholpen bij het vervangen van hardeschijven
-                        en RAM-geheugen in ongeveer 3000 computers en werkplekken in de Hogeschool.</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/hogeschool_leiden.png" alt="Hogeschool Leiden">
-                </div>
-            </div>
-            <div class="timeline timeline--right">
-                <div class="timeline__description">
-                    <h3>Studentaanhuis - ICT consultent</h3>
-                    <h4>December 2015 - Oktober 2016</h4>
-                    <p>Bij studentaanhuis kwam ik bij klanten thuis om diverse problemen
-                        op te lossen. Dat kon variëren van e-mail problemen tot nieuwe computers
-                        installeren.</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/studentaanhuis.jpg" alt="Studentaanhuis">
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline__description">
-                    <h3>Flora Holland - Logistiek medewerker</h3>
-                    <h4>Juli 2014</h4>
-                    <p>Mijn eerste baan was bij Flora Holland. Hier heb ik bloemen
-                        verplaatst van de ene naar de andere afdeling om ervoor te zorgen dat de bloemen bij de juiste
-                        klant
-                        afgeleverd werden.</p>
-                </div>
-                <div class="timeline__image">
-                    <img src="img/timeline/flora_holland.jpg" alt="Flora Holland">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-competences" id="section-competences">
-        <div class="header--secondairy">
-            <h2>Competenties</h2>
-            <p>Hieronder staan alle skills en vaardigheden die ik heb, en alle technieken waar ik mee heb gewerkt.</p>
-        </div>
-        <div>
-            <div class="competences">
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/laravel_portfolio.svg" alt="Laravel">
-                    </div>
-                    <div class="competence__description">
-                        <h3>Laravel</h3>
-                        <p>Laravel is een php framework gebouwd op het model – view – controller pattern.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/php_portfolio.svg" alt="PHP">
-                    </div>
-                    <div class="competence__description">
-                        <h3>PHP</h3>
-                        <p>Php is een programeertaal vooral gebruikt voor back-end programmeren.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/javascript_portfolio.svg" alt="Javascript">
-                    </div>
-                    <div class="competence__description">
-                        <h3>Javascript</h3>
-                        <p>Ik heb erg veel gewerkt met webdevelopment en ik ben behendig geworden met javascript.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/css_portfolio.svg" alt="css">
-                    </div>
-                    <div class="competence__description">
-                        <h3>CSS</h3>
-                        <p>Bij webdevelopment is css natuurlijk niet weg te denken.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/html_portfolio.svg" alt="HTML">
-                    </div>
-                    <div class="competence__description">
-                        <h3>HTML</h3>
-                        <p>Ook heb ik ervaring met basis HTML en HTML5.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/react_portfolio.svg" alt="React">
-                    </div>
-                    <div class="competence__description">
-                        <h3>React</h3>
-                        <p>In een dynamische wereld zijn javascript frameworks een must.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/angular_portfolio.svg" alt="Angular">
-                    </div>
-                    <div class="competence__description">
-                        <h3>Angular</h3>
-                        <p>Een fantastisch framework gemaakt door Google.</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence__image">
-                        <img src="img/competenties/nodejs_portfolio.svg" alt="Nodejs">
-                    </div>
-                    <div class="competence__description">
-                        <h3>Nodejs</h3>
-                        <p>Super snelle asynchrone code</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <div class="footer__content">
-        <p class="footer__description">Gemaakt door Job Vink</p>
-        <div class="social-buttons">
-            <div class="social-button">
-                <a target="_blank" href="https://twitter.com/jobvink"><i class="fa fa-twitter"></i></a>
-            </div>
-            <div class="social-button">
-                <a target="_blank" href="https://www.facebook.com/job.vink"><i class="fa fa-facebook"></i></a>
-            </div>
-            <div class="social-button">
-                <a target="_blank" href="https://www.linkedin.com/in/job-vink-64648812b/"><i class="fa fa-linkedin"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<div class="popup" id="modal1" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Specialisatie project</h2>
-        <p>Een reis door het spijsverteringsstelsel.</p>
-        <img src="img/portfolio/mod1_1.jpg" alt=""/>
-        <p>Het eerste project dat ik in mijn opleiding gedaan heb, was een project in opdracht van
-            het Boerhaave Museum in Leiden. Wij kregen de opdracht om een interactieve installatie
-            te bouwen voor kinderen tussen de 10 en 14 jaar. Het thema van onze installatie moest
-            gezondheid en lichaam zijn. Mijn projectgroepje heeft er voor gekozen om een reis
-            door het spijsverteringsstelsel te maken.</p>
-        <p>Bij dit project hebben wij intensief nagedacht over de gebruiksvriendelijkheid van onze
-            installatie. Ons doel was om het de kinderen zo makkelijk mogelijk te maken. Dit hebben
-            we gedaan door sterk in te zetten op de gebruiksvriendelijkheid van onze
-            installatie.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/7NHE-gKHsx8"
-                frameborder="0" allowfullscreen></iframe>
-        <a class="close btn btn--default" href="#section-portfolio"><i class="fa fa-times"></i> Sluit Project</a>
     </div>
 </div>
 
-<div class="popup" id="modal2" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Interactive website NOS</h2>
-        <p>Een kijkje in Noord-Korea.</p>
-        <img src="img/portfolio/mod2_1.png" alt="">
-        <h3><a href="resources/nos/index.html">Bekijk de website</a></h3>
-        <p>Bij dit project moesten we in opdracht van de NOS een interactieve website maken. De
-            visie van de NOS is om bepaalde verhalen en nieuwsitems uitgebreid uit te lichten in
-            wat de NOS 'specials' noemt. Dit zijn uitgebreide verhalen waar af en toe een
-            interactief element in zit. Een voorbeeld van zo'n interactief verhaal is: <a
-                    href="http://lab.nos.nl/projects/drugs/">"Het DNA van MDMA"</a> van de NOS.</p>
-        <p>Wij kregen de opdracht om zo'n 'special' te maken. We kregen als onderwerp een verhaal
-            over Noord-Korea. Dit is een land waar een totale dictatuur heerst. Wij hebben deze
-            sfeer in onze website naar voren laten komen door na te denken over bijvoorbeeld het
-            kleurgebruik. Daarbij hebben we alle aandachtspunten naar voren laten komen door dit
-            kleurgebruik toe te passen.</p>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Interactive website NOS</h2>
+                    <p>Een kijkje in Noord-Korea.</p>
+                    <img src="img/portfolio/mod2_1.png" alt="">
+                    <p>Bij dit project moesten we in opdracht van de NOS een interactieve website maken. De
+                        visie van de NOS is om bepaalde verhalen en nieuwsitems uitgebreid uit te lichten in
+                        wat de NOS 'specials' noemt. Dit zijn uitgebreide verhalen waar af en toe een
+                        interactief element in zit. Een voorbeeld van zo'n interactief verhaal is: <a
+                            href="http://lab.nos.nl/projects/drugs/">"Het DNA van MDMA"</a> van de NOS.</p>
+                    <p>Wij kregen de opdracht om zo'n 'special' te maken. We kregen als onderwerp een verhaal
+                        over Noord-Korea. Dit is een land waar een totale dictatuur heerst. Wij hebben deze
+                        sfeer in onze website naar voren laten komen door na te denken over bijvoorbeeld het
+                        kleurgebruik. Daarbij hebben we alle aandachtspunten naar voren laten komen door dit
+                        kleurgebruik toe te passen.</p>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal3" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Virtual reality</h2>
-        <p>Ervaar het echte werk.</p>
-        <img src="img/portfolio/mod3_1.jpg" alt="">
-        <h3><a href="resources/vr/index.html">Bekijk de website (alleen op firefox)</a></h3>
-        <p>Voor mijn derde project als student bij de Hogeschool Leiden moesten wij een
-            web-applicatie voor virtual reality maken.</p>
-        <p>Mijn projectgenoot en ik hebben besloten om een fietsenwinkel na te bootsen in virtual
-            reality. Het idee achter ons concept was dat je dan het product kunt ervaren zoals het in
-            het werkelijk is.</p>
-        <p>Voor dit project hebben we met A-frame gewerkt. A-frame is een framework gebouwd voor
-            virtual reality in een web omgeving.</p>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Specialisatie project</h2>
+                    <p>Een reis door het spijsverteringsstelsel.</p>
+                    <img src="img/portfolio/mod1_1.jpg" alt=""/>
+                    <p>Het eerste project dat ik in mijn opleiding gedaan heb, was een project in opdracht van
+                        het Boerhaave Museum in Leiden. Wij kregen de opdracht om een interactieve installatie
+                        te bouwen voor kinderen tussen de 10 en 14 jaar. Het thema van onze installatie moest
+                        gezondheid en lichaam zijn. Mijn projectgroepje heeft er voor gekozen om een reis
+                        door het spijsverteringsstelsel te maken.</p>
+                    <p>Bij dit project hebben wij intensief nagedacht over de gebruiksvriendelijkheid van onze
+                        installatie. Ons doel was om het de kinderen zo makkelijk mogelijk te maken. Dit hebben
+                        we gedaan door sterk in te zetten op de gebruiksvriendelijkheid van onze
+                        installatie.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7NHE-gKHsx8"
+                            frameborder="0" allowfullscreen></iframe>
+                    <a class="close btn btn--default" href="#section-portfolio"><i class="fa fa-times"></i> Sluit
+                        Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal4" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>IoT selution in de retail</h2>
-        <p>Een slimme kledinghanger.</p>
-        <img src="img/portfolio/mod4_1.jpg" alt="">
-        <p>Voor dit project moesten wij een installatie maken voor een winkel. Wij kwamen met het
-            idee om een slimme kleding-hanger te maken. Het idee was dat de consument zijn maat in
-            kan voeren op het kledingrek, vervolgens licht het lampje van de ingevoerde maat op bij
-            de hanger, zodat de consument direct weet waar zijn maat hangt.</p>
-        <p>De concurrentie van de webshops is tegenwoordig groot. Fysieke winkels kunnen daarom
-            minder personeel inhuren. Het is daarom erg belangrijk om consumenten snel te helpen,
-            zodat het personeel dat er wel staat zo veel mogelijk mensen kunnen helpen.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gI9ETe90ML4"
-                frameborder="0" allowfullscreen></iframe>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Virtual reality</h2>
+                    <p>Ervaar het echte werk.</p>
+                    <img src="img/portfolio/mod3_1.jpg" alt="">
+                    <h3><a href="resources/vr/index.html">Bekijk de website (alleen op firefox)</a></h3>
+                    <p>Voor mijn derde project als student bij de Hogeschool Leiden moesten wij een
+                        web-applicatie voor virtual reality maken.</p>
+                    <p>Mijn projectgenoot en ik hebben besloten om een fietsenwinkel na te bootsen in virtual
+                        reality. Het idee achter ons concept was dat je dan het product kunt ervaren zoals het in
+                        het werkelijk is.</p>
+                    <p>Voor dit project hebben we met A-frame gewerkt. A-frame is een framework gebouwd voor
+                        virtual reality in een web omgeving.</p>
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal5" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Baat bij bewind</h2>
-        <img src="img/portfolio/mod5_1.png" alt="Baat bij bewind banner">
-        <h3><a target="_blank" href="https://baatbijbewind.nl">Bekijk de website</a></h3>
-        <p>Deze website heb ik gemaakt voor mijn oom die zzp’er is, en een eigen bedrijf heeft in bewindvoering. Het is
-            belangrijk dat zzp’ers zichtbaar zijn op het internet. Dit kan behaald worden door gebruik te maken van
-            search engine optimization.</p>
-        <p>Een andere handige tip waar ik gebruik van gemaakt heb om deze website zichtbaar te maken op Google is door
-            het bedrijf van deze klant toe te voegen aan google maps via google’s local guide programma. Op deze manier
-            wordt het bedrijf direct zichtbaar als de naam ingetypt wordt op Google. Je moet ook leren letten op
-            kleinere details. Google geeft bijvoorbeeld voorrang aan websites die alleen bereikbaar zijn met https.</p>
-        <img src="img/portfolio/mod5_2.png" alt="Google baat bij bewind">
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>IoT selution in de retail</h2>
+                    <p>Een slimme kledinghanger.</p>
+                    <img src="img/portfolio/mod4_1.jpg" alt="">
+                    <p>Voor dit project moesten wij een installatie maken voor een winkel. Wij kwamen met het
+                        idee om een slimme kleding-hanger te maken. Het idee was dat de consument zijn maat in
+                        kan voeren op het kledingrek, vervolgens licht het lampje van de ingevoerde maat op bij
+                        de hanger, zodat de consument direct weet waar zijn maat hangt.</p>
+                    <p>De concurrentie van de webshops is tegenwoordig groot. Fysieke winkels kunnen daarom
+                        minder personeel inhuren. Het is daarom erg belangrijk om consumenten snel te helpen,
+                        zodat het personeel dat er wel staat zo veel mogelijk mensen kunnen helpen.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gI9ETe90ML4"
+                            frameborder="0" allowfullscreen></iframe>
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal6" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Pedicuren</h2>
-        <img src="img/portfolio/mod6_1.jpg" alt="Baat bij bewind banner">
-        <h3><a target="_blank" href="https://tenen-voeten.nl">Bekijk de website</a></h3>
-        <p>Deze website heb ik gemaakt voor mijn tante. Mijn tante is pedicure, voor haar is het belangrijk dat haar
-            website de mogelijkheid biedt om informatie te geven over wat ze doet en wat bijvoorbeeld de tarieven van
-            haar praktijk zijn. Ook is het erg belangrijk dat potentiele klanten gemakkelijk contact met haar kunnen
-            leggen. Dit proces kun je verbeteren door kleine dingetjes iets gebruiksvriendelijker te maken, door
-            bijvoorbeeld het telefoonnummer klikbaar te maken, zodat de klant direct op het nummer kan klikken als deze
-            op zijn of haar mobiel de website bezoekt.</p>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Baat bij bewind</h2>
+                    <img src="img/portfolio/mod5_1.png" alt="Baat bij bewind banner">
+                    <h3><a target="_blank" href="https://baatbijbewind.nl">Bekijk de website</a></h3>
+                    <p>Deze website heb ik gemaakt voor mijn oom die zzp’er is, en een eigen bedrijf heeft in
+                        bewindvoering. Het is
+                        belangrijk dat zzp’ers zichtbaar zijn op het internet. Dit kan behaald worden door gebruik te
+                        maken van
+                        search engine optimization.</p>
+                    <p>Een andere handige tip waar ik gebruik van gemaakt heb om deze website zichtbaar te maken op
+                        Google is door
+                        het bedrijf van deze klant toe te voegen aan google maps via google’s local guide programma. Op
+                        deze manier
+                        wordt het bedrijf direct zichtbaar als de naam ingetypt wordt op Google. Je moet ook leren
+                        letten op
+                        kleinere details. Google geeft bijvoorbeeld voorrang aan websites die alleen bereikbaar zijn met
+                        https.</p>
+                    <img src="img/portfolio/mod5_2.png" alt="Google baat bij bewind">
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal7" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Flexscreen website</h2>
-        <h3><a href="https://flexscreen.nl">Bekijk de website</a></h3>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Pedicuren</h2>
+                    <img src="img/portfolio/mod6_1.jpg" alt="Baat bij bewind banner">
+                    <h3><a target="_blank" href="https://tenen-voeten.nl">Bekijk de website</a></h3>
+                    <p>Deze website heb ik gemaakt voor mijn tante. Mijn tante is pedicure, voor haar is het belangrijk
+                        dat haar
+                        website de mogelijkheid biedt om informatie te geven over wat ze doet en wat bijvoorbeeld de
+                        tarieven van
+                        haar praktijk zijn. Ook is het erg belangrijk dat potentiele klanten gemakkelijk contact met
+                        haar kunnen
+                        leggen. Dit proces kun je verbeteren door kleine dingetjes iets gebruiksvriendelijker te maken,
+                        door
+                        bijvoorbeeld het telefoonnummer klikbaar te maken, zodat de klant direct op het nummer kan
+                        klikken als deze
+                        op zijn of haar mobiel de website bezoekt.</p>
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal8" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Durf</h2>
-        <img src="img/portfolio/durf_home.png" alt="Homepagina durfkatwijk">
-        <p>Begin 2018 waren er gemeenteraadsverkiezingen. Een van de deelnemende partijen bij de verkiezingen in mijn dorp was DURF. Deze partij is opgericht door een oude schoolvriend van mij. De website van deze partij kon wel wat verbeterpunten gebruiken. Ik heb mijn hulp aangeboden en ben sindsdien verantwoordelijk voor het beheer van de website van de partij.</p>
-        <p>Het meest interessante aan dit project vond ik de wijze waarmee ik de doelgroep heb bepaald. Aan het begin van het project had ik moeite met het inschatten van de doelgroep, omdat de partij nog niet eerder mee had gedaan aan de verkiezingen en dus nog geen statistiek had van welke mensen in Katwijk op DURF stemden. Daarom heb ik gekeken naar die demografie van Katwijk en heb ik vervolgens gekeken naar de Google analytics om de doelgroep beter te definiëren. Door deze iteratieve manier van werken kon ik een veel betere website neer zetten.</p>
-        <img src="img/portfolio/durf_google_analytics.png" alt="Statestiek durfkatijk">
-        <p>Ik heb deze website gebouwd in php met het symfonie framework.</p>
-        <a target="_blank" class="close btn btn--default" href="https://durfkatwijk.nl">Bekijk de website</a>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Durf</h2>
+                    <img src="img/portfolio/durf_home.png" alt="Homepagina durfkatwijk">
+                    <p>Begin 2018 waren er gemeenteraadsverkiezingen. Een van de deelnemende partijen bij de
+                        verkiezingen in mijn
+                        dorp was DURF. Deze partij is opgericht door een oude schoolvriend van mij. De website van deze
+                        partij kon
+                        wel wat verbeterpunten gebruiken. Ik heb mijn hulp aangeboden en ben sindsdien verantwoordelijk
+                        voor het
+                        beheer van de website van de partij.</p>
+                    <p>Het meest interessante aan dit project vond ik de wijze waarmee ik de doelgroep heb bepaald. Aan
+                        het begin
+                        van het project had ik moeite met het inschatten van de doelgroep, omdat de partij nog niet
+                        eerder mee had
+                        gedaan aan de verkiezingen en dus nog geen statistiek had van welke mensen in Katwijk op DURF
+                        stemden.
+                        Daarom heb ik gekeken naar die demografie van Katwijk en heb ik vervolgens gekeken naar de
+                        Google analytics
+                        om de doelgroep beter te definiëren. Door deze iteratieve manier van werken kon ik een veel
+                        betere website
+                        neer zetten.</p>
+                    <img src="img/portfolio/durf_google_analytics.png" alt="Statestiek durfkatijk">
+                    <p>Ik heb deze website gebouwd in php met het symfonie framework.</p>
+                    <a target="_blank" class="close btn btn--default" href="https://durfkatwijk.nl">Bekijk de
+                        website</a>
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal9" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>TVgids.nl</h2>
-        <img src="img/portfolio/tvgids_home.png" alt="Homepagina van tvgids.nl">
-        <p>Bij isource is één van de projecten waar ik aan gewerkt heb het vernieuwen van tvgids.nl. Dit is één van de meest bezochte Nederlandse websites. Ik ben ook erg trots dat ik hier aan mee heb mogen werken.</p>
-        <p>Binnen het project ben ik verantwoordelijk geweest voor de frontend van de website. Toen we de ontwerpen binnen kregen bij isource kon ik ook niet wachten om de verschillende componenten uit te denken.</p>
-        <img src="img/portfolio/tvgids_component.png" alt="Component uit tvgids.nl">
-        <p>Binnen het project hebben we er bijvoorbeeld voor gekozen om te werken met scss en een vaste naamgeving van classes aan te houden. De methode die we aangehouden hebben heet BEM en zorgt ervoor dat er niet alleen beter nagedacht wordt over de structuur van html, maar dat er ook nagedacht wordt over herbruikbare componenten.</p>
-        <img src="img/portfolio/BEM.png" style="width: 400px" alt="BEM methode">
-        <h3><a href="https://tvgids.nl">Bekijk de website</a></h3>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>TVgids.nl</h2>
+                    <img src="img/portfolio/tvgids_home.png" alt="Homepagina van tvgids.nl">
+                    <p>Bij isource is één van de projecten waar ik aan gewerkt heb het vernieuwen van tvgids.nl. Dit is
+                        één van de
+                        meest bezochte Nederlandse websites. Ik ben ook erg trots dat ik hier aan mee heb mogen
+                        werken.</p>
+                    <p>Binnen het project ben ik verantwoordelijk geweest voor de frontend van de website. Toen we de
+                        ontwerpen
+                        binnen kregen bij isource kon ik ook niet wachten om de verschillende componenten uit te
+                        denken.</p>
+                    <img src="img/portfolio/tvgids_component.png" alt="Component uit tvgids.nl">
+                    <p>Binnen het project hebben we er bijvoorbeeld voor gekozen om te werken met scss en een vaste
+                        naamgeving van
+                        classes aan te houden. De methode die we aangehouden hebben heet BEM en zorgt ervoor dat er niet
+                        alleen
+                        beter nagedacht wordt over de structuur van html, maar dat er ook nagedacht wordt over
+                        herbruikbare
+                        componenten.</p>
+                    <img src="img/portfolio/BEM.png" style="width: 400px" alt="BEM methode">
+                    <h3><a href="https://tvgids.nl">Bekijk de website</a></h3>
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="popup" id="modal10" role="dialog" tabindex="-1">
-    <div class="popup__close close">
-        &nbsp;
-    </div>
-    <div class="popup__content">
-        <h2>Floating lab</h2>
-        <img src="img/portfolio/floating_lab_boat.jpg" alt="RPA 3">
-        <p>Voor mijn minor Data Analytics ben ik bezig met een project in samenwerking met Port of Rotterdam, om een boot autonoom te laten varen</p>
-        <p>Hiervoor zijn we bezig met vraagstukken zoals, hoe herken je de kade op camerabeelden en hoe herken je andere boten die om je heen varen.</p>
-        <p>Hieronder zie je een filmpje waarin te zien is hoe ons algoritme met computervision herkent waar de kade is.</p>
-        <img src="img/portfolio/floating_lab_demo.gif" alt="Demo van kade herkenning">
-        <p>Ook ben ik bij mijn minor bezig met andere cutting edge technologieën zoals Neural Networks.</p>
-        <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+<div class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="article" aria-modal="true">
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+
+        <div
+            class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="prose block mx-auto">
+                    <h2>Floating lab</h2>
+                    <img src="img/portfolio/floating_lab_boat.jpg" alt="RPA 3">
+                    <p>Voor mijn minor Data Analytics ben ik bezig met een project in samenwerking met Port of
+                        Rotterdam, om een
+                        boot autonoom te laten varen</p>
+                    <p>Hiervoor zijn we bezig met vraagstukken zoals, hoe herken je de kade op camerabeelden en hoe
+                        herken je andere
+                        boten die om je heen varen.</p>
+                    <p>Hieronder zie je een filmpje waarin te zien is hoe ons algoritme met computervision herkent waar
+                        de kade
+                        is.</p>
+                    <img src="img/portfolio/floating_lab_demo.gif" alt="Demo van kade herkenning">
+                    <p>Ook ben ik bij mijn minor bezig met andere cutting edge technologieën zoals Neural Networks.</p>
+                    <a class="close btn btn--default"><i class="fa fa-times"></i> Sluit Project</a>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button"
+                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    sluiten
+                </button>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -537,16 +707,16 @@
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-<script>
-    window.ga = function () {
-        ga.q.push(arguments)
-    };
-    ga.q = [];
-    ga.l = +new Date;
-    ga('create', 'UA-103564665-1', 'auto');
-    ga('send', 'pageview')
-</script>
-<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<!--<script>-->
+<!--    window.ga = function () {-->
+<!--        ga.q.push(arguments)-->
+<!--    };-->
+<!--    ga.q = [];-->
+<!--    ga.l = +new Date;-->
+<!--    ga('create', 'UA-103564665-1', 'auto');-->
+<!--    ga('send', 'pageview')-->
+<!--</script>-->
+<!--<script src="https://www.google-analytics.com/analytics.js" async defer></script>-->
 
 </body>
 </html>

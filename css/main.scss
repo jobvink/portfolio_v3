@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply border-2 rounded-lg px-3 py-2 cursor-pointer
+    }
+
+    .btn--purple {
+        @apply border-purple-600 text-purple-100 hover:bg-purple-600 hover:text-purple-200
+    }
+
+    .timelines::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: .2rem;
+        height: 100%;
+        background-color: rgb(156, 163, 175)
+    }
+}
+
