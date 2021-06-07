@@ -8,7 +8,12 @@
   },
   "scripts": {
     "dev": "nodemon --watch index.html -x \"npx tailwindcss-cli build css/main.scss -o css/main.css\"",
-    "build": "npx tailwindcss-cli build css/main.scss -o css/main.css"
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve",
+    "start": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,11 +27,21 @@
   "homepage": "https://github.com/jobvink/portfolio_v3#readme",
   "dependencies": {
     "@tailwindcss/typography": "^0.4.0",
-    "nodemon": "^2.0.7"
+    "core-js": "^3.14.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "nodemon": "^2.0.7",
+    "vue": "^2.6.14",
+    "vue-loader": "^15.9.7",
+    "vue-router": "^3.5.1",
+    "vue-template-compiler": "^2.6.14",
+    "webpack-dev-server": "^3.11.2"
   },
   "devDependencies": {
+    "@webpack-cli/generators": "^2.2.0",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.15",
-    "tailwindcss": "^2.1.2"
+    "tailwindcss": "^2.1.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
   }
 }
