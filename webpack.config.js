@@ -31,7 +31,7 @@ const config = {
                 loader: "vue-loader",
             },
             {
-                test: /\.css$/i,
+                test: /\.scss$/i,
                 include: path.resolve(__dirname, 'src'),
                 use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
