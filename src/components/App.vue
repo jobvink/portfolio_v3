@@ -21,93 +21,13 @@
             <h2 class="font-bold text-4xl mb-2">Opdrachten</h2>
             <p class="text-base">Een overzicht van al mijn projecten.</p>
             <div class="grid grid-cols-3 gap-x-4 gap-y-8 mt-16">
-                <div class="bg-purple-200" data-modal="#modal10">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/floating_lab_front.jpg"
-                             alt="Floating lab">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Floating lab</h3>
-                        <p>Zelf varende boot in samenwerking met Port of Rotterdam</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal9">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/tvgids_home.png" alt="TVgids.nl">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">TVgids.nl</h3>
-                        <p>Website voor televisie en ondemand content</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal8">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/durf_home.png" alt="Durfkatijk">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Durfkatijk</h3>
-                        <p>Website politieke partij</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal6">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/mod6_front.jpg" alt="Pedicure">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Pedicure</h3>
-                        <p>Persoonlijke website</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal5">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/mod5_front.png"
-                             alt="Baat bij bewind">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Baat bij bewind</h3>
-                        <p>Persoonlijke website</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal4">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/mod4_front.jpg"
-                             alt="IoT selution in de retail">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">IoT selution in de retail</h3>
-                        <p>Een slimme kledinghanger</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal3">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/mod3_front.jpg"
-                             alt="Virtual reality">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Virtual reality</h3>
-                        <p>Ervaar het echte werk</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal2">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/mod2_front.jpg"
-                             alt="Interactive website NOS">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Interactive website NOS</h3>
-                        <p>Een kijkje in Noord-Korea</p>
-                    </div>
-                </div>
-                <div class="bg-purple-200" data-modal="#modal1">
-                    <div class="p-4">
-                        <img class="w-full h-52 object-cover" src="../../img/portfolio/mod1_front.jpg"
-                             alt="Specialisatie project">
-                    </div>
-                    <div class="pt-2 px-4 pb-8">
-                        <h3 class="font-bold text-xl mt-2">Specialisatie project</h3>
-                        <p>Een reis door het spijsverteringskanaal</p>
-                    </div>
-                </div>
+                <portfolio-item v-for="item in portfolio"
+                                :key="item.id"
+                                v-on:click.native="visibleModal = item.id"
+                                v-bind:title="item.title"
+                                v-bind:description="item.description"
+                                v-bind:image="item.image"
+                />
             </div>
         </section>
         <hr class="h-0.5 rounded-full m-16 bg-purple-400">
@@ -259,5 +179,54 @@
                 </div>
             </div>
         </section>
+        <portfolio-model v-for="modal in modals"
+                         v-if="visibleModal === modal.id"
+                         v-on:close="visibleModal = false"
+                         v-bind:content="modal.content"
+        />
     </main>
 </template>
+
+<script>
+import PortfolioItem from './PortfolioItem.vue'
+import PortfolioModel from './PortfolioModel.vue'
+
+export default {
+    data: function () {
+        return {
+            visibleModal: false,
+            portfolio: [
+                {id:1, title: 'Floating Lab', description: 'Zelf varende boot in samenwerking met Port of Rotterdam', image: '../../img/portfolio/floating_lab_front.jpg'},
+                {id:2, title: 'TVgids.nl', description: 'Website voor televisie en ondemand content', image: '../../img/portfolio/tvgids_home.png'},
+                {id:3, title: 'Durfkatijk', description: 'Website politieke partij', image: '../../img/portfolio/durf_home.png'},
+                {id:4, title: 'Pedicure', description: 'Persoonlijke website', image: '../../img/portfolio/mod6_front.jpg'},
+                {id:5, title: 'Baat bij bewind', description: 'Persoonlijke website', image: '../../img/portfolio/mod5_front.png'},
+                {id:6, title: 'IoT selution in de retail', description: 'Een slimme kledinghanger', image: '../../img/portfolio/mod4_front.jpg'},
+                {id:7, title: 'Virtual reality', description: 'Ervaar het echte werk', image: '../../img/portfolio/mod3_front.jpg'},
+                {id:8, title: 'Interactive website NOS', description: 'Een kijkje in Noord-Korea', image: '../../img/portfolio/mod2_front.jpg'},
+                {id:9, title: 'Specialisatie project', description: 'Een reis door het spijsverteringskanaal', image: '../../img/portfolio/mod1_front.jpg'},
+            ],
+            modals: [
+                {id:1, content: ''},
+                {id:2, content: '<h2>Interactive website NOS</h2>' +
+                        '<p>Een kijkje in Noord-Korea.</p>' +
+                        '<img src="img/portfolio/mod2_1.png" alt="">' +
+                        '<p>Bij dit project moesten we in opdracht van de NOS een interactieve website maken. De' +
+                        '    visie van de NOS is om bepaalde verhalen en nieuwsitems uitgebreid uit te lichten in' +
+                        '    wat de NOS \'specials\' noemt. Dit zijn uitgebreide verhalen waar af en toe een' +
+                        '    interactief element in zit. Een voorbeeld van zo\'n interactief verhaal is: ' +
+                        '<a href="http://lab.nos.nl/projects/drugs/">"Het DNA van MDMA"</a> van de NOS.</p>' +
+                        '<p>Wij kregen de opdracht om zo\'n \'special\' te maken. We kregen als onderwerp een verhaal' +
+                        '    over Noord-Korea. Dit is een land waar een totale dictatuur heerst. Wij hebben dezn' +
+                        '    sfeer in onze website naar voren laten komen door na te denken over bijvoorbeeld het' +
+                        '    kleurgebruik. Daarbij hebben we alle aandachtspunten naar voren laten komen door dit' +
+                        '    kleurgebruik toe te passen.</p>'}
+            ]
+        }
+    },
+    components: {
+        'portfolio-item': PortfolioItem,
+        'portfolio-model': PortfolioModel
+    }
+}
+</script>

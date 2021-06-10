@@ -30,8 +30,11 @@ const config = {
                 test: /\.vue$/,
                 loader: "vue-loader",
             },
-            // Add your rules for custom modules here
-            // Learn more about loaders from https://webpack.js.org/loaders/
+            {
+                test: /\.css$/i,
+                include: path.resolve(__dirname, 'src'),
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
+            },
         ],
     },
     resolve: {
