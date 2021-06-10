@@ -7,7 +7,6 @@
     "doc": "doc"
   },
   "scripts": {
-    "dev": "nodemon --watch index.html -x \\\"npx tailwindcss-cli build src/css/main.scss -o css/main.css\\\"",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
@@ -38,12 +37,15 @@
     "vue": "^2.6.14",
     "vue-loader": "^15.9.7",
     "vue-router": "^3.5.1",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "vue2-scrollspy": "^2.3.1"
   },
   "devDependencies": {
-    "@webpack-cli/generators": "^0.1.2",
+    "@webpack-cli/generators": "^2.2.0",
     "autoprefixer": "^10.2.5",
+    "node-sass": "^6.0.0",
     "postcss": "^8.3.0",
+    "sass-loader": "^12.1.0",
     "tailwindcss": "^2.0.4",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",

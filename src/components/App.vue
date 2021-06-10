@@ -1,6 +1,6 @@
 <template>
-    <main>
-        <section class="bg-purple-700 px-4 py-4 rounded-md mx-16 mt-16 text-white">
+    <main v-scroll-spy="{selector: 'section'}">
+        <header id="section-portfolio" class="bg-purple-700 px-4 py-4 rounded-md mx-16 mt-16 text-white">
             <h2 class="font-bold text-2xl">Uitgelicht</h2>
             <div class="flex">
                 <div class="w-5/6 pr-8">
@@ -15,9 +15,9 @@
                     <img src="../../img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
                 </div>
             </div>
-        </section>
-        <hr class="h-0.5 rounded-full m-16 bg-purple-400">
-        <section class="px-16" id="section-portfolio">
+        </header>
+        <section class="px-16" id="section-opdrachten">
+            <hr class="h-0.5 rounded-full my-16 bg-purple-400">
             <h2 class="font-bold text-4xl mb-2">Opdrachten</h2>
             <p class="text-base">Een overzicht van al mijn projecten.</p>
             <div class="grid grid-cols-3 gap-x-4 gap-y-8 mt-16">
@@ -29,13 +29,14 @@
                                 v-bind:image="item.image"
                 />
             </div>
+            <hr class="h-0.5 rounded-full my-16 bg-purple-400">
         </section>
-        <hr class="h-0.5 rounded-full m-16 bg-purple-400">
         <section class="px-4 py-4 px-16" id="section-timeline">
             <h2 class="font-bold text-4xl mb-2">Tijdlijn</h2>
             <p class="font-bold text-lg">Een overzicht van mijn werkervaring.</p>
             <div class="timelines relative">
                 <timeline-item v-for="item in timeline"
+                               :key="item.id"
                                v-bind:employer="item.employer"
                                v-bind:job_title="item.job_title"
                                v-bind:start_date="item.start_date"
@@ -44,8 +45,8 @@
                     {{ item.description }}
                 </timeline-item>
             </div>
+            <hr class="h-0.5 rounded-full my-16 bg-purple-400">
         </section>
-        <hr class="h-0.5 rounded-full m-16 bg-purple-400">
         <section class="px-16" id="section-competences">
             <h2 class="font-bold text-4xl mb-2">Competenties</h2>
             <p class="text-base">Hieronder staan alle skills en vaardigheden die ik heb, en alle technieken waar ik
@@ -54,9 +55,11 @@
             <div>
                 <div class="grid gap-x-4 gap-y-8 grid-cols-4">
                     <competentie v-for="competentie in competenties"
+                                 :key="competentie.id"
                                  v-bind:src="competentie.src"
                                  v-bind:competentie="competentie.competentie"
-                    >{{competentie.description}}</competentie>
+                    >{{ competentie.description }}
+                    </competentie>
                 </div>
             </div>
         </section>
@@ -344,30 +347,37 @@ export default {
             ],
             competenties: [
                 {
+                    id: 1,
                     competentie: "PHP",
                     src: 'img/competenties/php_portfolio.svg',
                     description: "Php is een programeertaal vooral gebruikt voor back-end programmeren.",
                 }, {
+                    id: 2,
                     competentie: "Javascript",
                     src: 'img/competenties/javascript_portfolio.svg',
                     description: "Ik heb erg veel gewerkt met webdevelopment en ik ben behendig geworden met javascript.",
                 }, {
+                    id: 3,
                     competentie: "CSS",
                     src: 'img/competenties/css_portfolio.svg',
-                    description: "Bij webdevelopment is css natuurlijk niet weg te denken.",
+                    description: "Bij webdevelopment is scss natuurlijk niet weg te denken.",
                 }, {
+                    id: 4,
                     competentie: "HTML",
                     src: 'img/competenties/html_portfolio.svg',
                     description: "Ook heb ik ervaring met basis HTML en HTML5.",
                 }, {
+                    id: 5,
                     competentie: "React",
                     src: 'img/competenties/react_portfolio.svg',
                     description: "In een dynamische wereld zijn javascript frameworks een must.",
                 }, {
+                    id: 6,
                     competentie: "Angular",
                     src: 'img/competenties/angular_portfolio.svg',
                     description: "Een fantastisch framework gemaakt door Google.",
                 }, {
+                    id: 7,
                     competentie: "Nodejs",
                     src: 'img/competenties/nodejs_portfolio.svg',
                     description: "Super snelle asynchrone code",

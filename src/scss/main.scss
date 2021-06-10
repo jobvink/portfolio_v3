@@ -21,5 +21,14 @@
         height: 100%;
         background-color: rgb(156, 163, 175)
     }
+
+    .name {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2rem;
+    }
+
+    .active a {
+        @apply text-gray-300;
+    }
 }
 
