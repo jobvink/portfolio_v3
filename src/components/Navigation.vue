@@ -1,10 +1,10 @@
 <template>
     <div class="relative">
-        <div class="absolute text-white z-10 left-4 top-10 | md:hidden" @click="menu_is_open = !menu_is_open">
+        <div class="fixed text-white z-10 left-4 top-10 | md:hidden" @click="menu_is_open = !menu_is_open">
             <i v-bind:class="[menu_is_open ? 'text-white' : 'text-black' ]" class="fa fa-bars text-3xl"></i>
         </div>
         <nav v-bind:class="{ '-left-40': !menu_is_open}"
-             class="fixed h-screen w-40 bg-purple-700 px-3 py-8 transition-all duration-500 | md:h-full md:relative md:left-0">
+             class="fixed z-10 h-screen w-40 bg-purple-700 px-3 py-8 transition-all duration-500 | md:h-full md:relative md:left-0">
             <div class="sticky top-24">
                 <a class="name text-white block w-40" href="#">Job Vink</a>
                 <ul class="mt-4" v-scroll-spy-active v-scroll-spy-link>

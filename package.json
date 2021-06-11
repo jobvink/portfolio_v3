@@ -12,7 +12,7 @@
         "build:prod": "webpack --mode=production --node-env=production",
         "watch": "webpack --watch",
         "serve": "webpack serve",
-        "publish": "scp -r -P 7685 dist/* u15256p11072@jmcvink.nl:/home/u15256p11072/domains/jmcvink.nl/public_html/"
+        "publish": "scp -r -P 7685 dist/{*,.[^.],.??*} u15256p11072@jmcvink.nl:/home/u15256p11072/domains/jmcvink.nl/public_html/"
     },
     "repository": {
         "type": "git",

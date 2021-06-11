@@ -23,7 +23,7 @@ const config = {
         new CopyPlugin({
             patterns: [
                 {from:'./src/img', to: './img'},
-                {from: './src/fonts', to: './fonts'}
+                {from: './src/fonts', to: './fonts'},
             ]
         }),
         new MiniCssExtractPlugin(),
