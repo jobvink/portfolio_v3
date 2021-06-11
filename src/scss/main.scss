@@ -11,15 +11,17 @@
         @apply border-purple-600 text-purple-100 hover:bg-purple-600 hover:text-purple-200
     }
 
-    .timelines::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 104px;
-        transform: translate(0, -50%);
-        width: .2rem;
-        height: 100%;
-        background-color: rgb(156, 163, 175)
+    @media all and (min-width: 1024px) {
+        .timelines::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 104px;
+            transform: translate(0, -50%);
+            width: .2rem;
+            height: 100%;
+            background-color: rgb(156, 163, 175)
+        }
     }
 
     .name {

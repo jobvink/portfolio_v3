@@ -3,7 +3,7 @@
 # Useful .gitignore components: https://github.com/github/gitignore
 .idea/
 *.DS_Store
-img/competenties/raw
+src/img/competenties/raw
 resources/
 node_modules/
 dist/

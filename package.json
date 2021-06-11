@@ -1,54 +1,58 @@
 {
-  "name": "protfolio_job_vink",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "doc": "doc"
-  },
-  "scripts": {
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "serve": "webpack serve",
-    "start": "webpack-dev-server --mode development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jobvink/portfolio_v3.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jobvink/portfolio_v3/issues"
-  },
-  "homepage": "https://github.com/jobvink/portfolio_v3#readme",
-  "dependencies": {
-    "@tailwindcss/typography": "^0.4.0",
-    "core-js": "^3.14.0",
-    "css-loader": "^5.2.6",
-    "mini-css-extract-plugin": "^1.6.0",
-    "moment": "^2.29.1",
-    "nodemon": "^2.0.7",
-    "postcss-loader": "^5.3.0",
-    "postcss-preset-env": "^5.3.0",
-    "style-loader": "^2.0.0",
-    "vue": "^2.6.14",
-    "vue-loader": "^15.9.7",
-    "vue-router": "^3.5.1",
-    "vue-template-compiler": "^2.6.14",
-    "vue2-scrollspy": "^2.3.1"
-  },
-  "devDependencies": {
-    "@webpack-cli/generators": "^2.2.0",
-    "autoprefixer": "^10.2.5",
-    "node-sass": "^6.0.0",
-    "postcss": "^8.3.0",
-    "sass-loader": "^12.1.0",
-    "tailwindcss": "^2.0.4",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
-  }
+    "name": "protfolio_job_vink",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "doc": "doc"
+    },
+    "scripts": {
+        "build": "webpack --mode=production --node-env=production",
+        "build:dev": "webpack --mode=development",
+        "build:prod": "webpack --mode=production --node-env=production",
+        "watch": "webpack --watch",
+        "serve": "webpack serve",
+        "publish": "scp -r -P 7685 dist/* u15256p11072@jmcvink.nl:/home/u15256p11072/domains/jmcvink.nl/public_html/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jobvink/portfolio_v3.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jobvink/portfolio_v3/issues"
+    },
+    "homepage": "https://github.com/jobvink/portfolio_v3#readme",
+    "dependencies": {
+        "@tailwindcss/typography": "^0.4.0",
+        "core-js": "^3.14.0",
+        "css-loader": "^5.2.6",
+        "mini-css-extract-plugin": "^1.6.0",
+        "moment": "^2.29.1",
+        "nodemon": "^2.0.7",
+        "postcss-loader": "^5.3.0",
+        "postcss-preset-env": "^5.3.0",
+        "style-loader": "^2.0.0",
+        "vue": "^2.6.14",
+        "vue-lazyload": "^1.3.3",
+        "vue-router": "^3.5.1",
+        "vue-template-compiler": "^2.6.14",
+        "vue2-scrollspy": "^2.3.1"
+    },
+    "devDependencies": {
+        "@webpack-cli/generators": "^2.2.0",
+        "autoprefixer": "^10.2.5",
+        "copy-webpack-plugin": "^9.0.0",
+        "html-loader": "^2.1.2",
+        "html-webpack-plugin": "^5.3.1",
+        "node-sass": "^6.0.0",
+        "postcss": "^8.3.0",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^2.0.4",
+        "vue-loader": "^15.9.7",
+        "webpack": "^5.38.1",
+        "webpack-cli": "^4.7.2",
+        "webpack-dev-server": "^3.11.2"
+    }
 }

@@ -651,7 +651,9 @@ necessary to add media queries to detect which image to load. Here is an
 example for a retina iPhone:
 
 ```html
-<link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" href="img/startup-retina.png">
+
+<link rel="apple-touch-startup-image" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)"
+      href="../src/img/startup-retina.png">
 ```
 
 However, it is possible to detect which start-up image to use with JavaScript.

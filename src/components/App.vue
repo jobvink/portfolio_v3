@@ -1,6 +1,6 @@
 <template>
     <main v-scroll-spy="{selector: 'section'}">
-        <header id="section-portfolio" class="bg-purple-700 px-4 py-4 rounded-md mx-16 mt-16 text-white">
+        <header id="section-portfolio" class="bg-purple-700 px-4 py-4 rounded-md mx-4 mt-16 text-white | lg:mx-16">
             <h2 class="font-bold text-2xl">Uitgelicht</h2>
             <div class="flex">
                 <div class="w-5/6 pr-8">
@@ -12,15 +12,15 @@
                     </button>
                 </div>
                 <div class="w-1/6">
-                    <img src="../../img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
+                    <img src="img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
                 </div>
             </div>
         </header>
-        <section class="px-16" id="section-opdrachten">
+        <section class="px-4 | lg:px-16" id="section-opdrachten">
             <hr class="h-0.5 rounded-full my-16 bg-purple-400">
             <h2 class="font-bold text-4xl mb-2">Opdrachten</h2>
             <p class="text-base">Een overzicht van al mijn projecten.</p>
-            <div class="grid grid-cols-3 gap-x-4 gap-y-8 mt-16">
+            <div class="grid gap-x-4 gap-y-8 mt-16 | grid-cols-1 | md:grid-cols-2 | lg:grid-cols-3">
                 <portfolio-item v-for="item in portfolio"
                                 :key="item.id"
                                 v-on:click.native="visibleModal = item.id"
@@ -31,7 +31,7 @@
             </div>
             <hr class="h-0.5 rounded-full my-16 bg-purple-400">
         </section>
-        <section class="px-4 py-4 px-16" id="section-timeline">
+        <section class="px-4 py-4 lg:px-16" id="section-timeline">
             <h2 class="font-bold text-4xl mb-2">Tijdlijn</h2>
             <p class="font-bold text-lg">Een overzicht van mijn werkervaring.</p>
             <div class="timelines relative">
@@ -47,13 +47,13 @@
             </div>
             <hr class="h-0.5 rounded-full my-16 bg-purple-400">
         </section>
-        <section class="px-16" id="section-competences">
+        <section class="px-4 | lg:px-16" id="section-competences">
             <h2 class="font-bold text-4xl mb-2">Competenties</h2>
             <p class="text-base">Hieronder staan alle skills en vaardigheden die ik heb, en alle technieken waar ik
                 mee heb
                 gewerkt.</p>
             <div>
-                <div class="grid gap-x-4 gap-y-8 grid-cols-4">
+                <div class="grid gap-x-4 gap-y-8 | grid-cols-1 | md:grid-cols-2 | lg:grid-cols-3 | xl:grid-cols-4">
                     <competentie v-for="competentie in competenties"
                                  :key="competentie.id"
                                  v-bind:src="competentie.src"
@@ -64,6 +64,7 @@
             </div>
         </section>
         <portfolio-model v-for="modal in modals"
+                         :key="modal.id"
                          v-if="visibleModal === modal.id"
                          v-on:close="visibleModal = false"
                          v-bind:content="modal.content"
@@ -90,55 +91,55 @@ export default {
                     id: 1,
                     title: 'Floating Lab',
                     description: 'Zelf varende boot in samenwerking met Port of Rotterdam',
-                    image: '../../img/portfolio/floating_lab_front.jpg'
+                    image: 'img/portfolio/floating_lab_front.jpg'
                 },
                 {
                     id: 2,
                     title: 'TVgids.nl',
                     description: 'Website voor televisie en ondemand content',
-                    image: '../../img/portfolio/tvgids_home.png'
+                    image: 'img/portfolio/tvgids_home.png'
                 },
                 {
                     id: 3,
                     title: 'Durfkatijk',
                     description: 'Website politieke partij',
-                    image: '../../img/portfolio/durf_home.png'
+                    image: 'img/portfolio/durf_home.png'
                 },
                 {
                     id: 4,
                     title: 'Pedicure',
                     description: 'Persoonlijke website',
-                    image: '../../img/portfolio/mod6_front.jpg'
+                    image: 'img/portfolio/mod6_front.jpg'
                 },
                 {
                     id: 5,
                     title: 'Baat bij bewind',
                     description: 'Persoonlijke website',
-                    image: '../../img/portfolio/mod5_front.png'
+                    image: 'img/portfolio/mod5_front.png'
                 },
                 {
                     id: 6,
                     title: 'IoT selution in de retail',
                     description: 'Een slimme kledinghanger',
-                    image: '../../img/portfolio/mod4_front.jpg'
+                    image: 'img/portfolio/mod4_front.jpg'
                 },
                 {
                     id: 7,
                     title: 'Virtual reality',
                     description: 'Ervaar het echte werk',
-                    image: '../../img/portfolio/mod3_front.jpg'
+                    image: 'img/portfolio/mod3_front.jpg'
                 },
                 {
                     id: 8,
                     title: 'Interactive website NOS',
                     description: 'Een kijkje in Noord-Korea',
-                    image: '../../img/portfolio/mod2_front.jpg'
+                    image: 'img/portfolio/mod2_front.jpg'
                 },
                 {
                     id: 9,
                     title: 'Specialisatie project',
                     description: 'Een reis door het spijsverteringskanaal',
-                    image: '../../img/portfolio/mod1_front.jpg'
+                    image: 'img/portfolio/mod1_front.jpg'
                 },
             ],
             modals: [

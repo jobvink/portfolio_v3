@@ -1,34 +1,51 @@
 // Generated using webpack-cli https://github.com/webpack/webpack-cli
 
 const path = require('path');
-const { VueLoaderPlugin } = require("vue-loader");
-
+const {VueLoaderPlugin} = require("vue-loader");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+
 const isProduction = process.env.NODE_ENV == 'production';
 
 
 const config = {
-    entry: ['./src/scss/main.scss', './src/index.js'],
+    entry: ['./src/index.html', './src/scss/main.scss', './src/js/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
     },
     devServer: {
         open: true,
         host: 'localhost',
+        contentBase: path.resolve(__dirname, 'dist')
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                {from:'./src/img', to: './img'},
+                {from: './src/fonts', to: './fonts'}
+            ]
+        }),
         new MiniCssExtractPlugin(),
         new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            hash: true,
+            template: './src/index.html',
+        })
     ],
     module: {
         rules: [
+            {
+                test: /\.vue$/,
+                loader: "vue-loader",
+            },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },
             {
-                test: /\.vue$/,
-                loader: "vue-loader",
+                test: /\.html$/i,
+                loader: 'html-loader',
             },
             {
                 test: /\.scss$/i,
