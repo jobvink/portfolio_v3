@@ -2,8 +2,8 @@
     <main v-scroll-spy="{selector: 'section'}">
         <header id="section-portfolio" class="bg-purple-700 px-4 py-4 rounded-md mx-4 mt-16 text-white | lg:mx-16">
             <h2 class="font-bold text-2xl">Uitgelicht</h2>
-            <div class="flex">
-                <div class="w-5/6 pr-8">
+            <div class="md:flex">
+                <div class="mb-4 w-full | md:w-5/6 md:pr-8">
                     <p class="pt-2">TVgids.nl is een website die zich richt op content met betrekking tot
                         televisieprogramma's en ondemand content Tijdens dit project ben ik verantwoordelijk geweest
                         voor de frontend van de website.</p>
@@ -11,7 +11,7 @@
                         Bekijk het project
                     </button>
                 </div>
-                <div class="w-1/6">
+                <div class="w-full md:w-1/6">
                     <img src="img/portfolio/tvgids_home.png" alt="TVgids.nl homepage">
                 </div>
             </div>

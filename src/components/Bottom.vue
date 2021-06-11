@@ -1,5 +1,5 @@
 <template>
-    <footer class="flex justify-between px-16 py-4 bg-purple-700 mt-16">
+    <footer class="flex justify-between px-4 py-4 bg-purple-700 mt-16 | lg:px-16">
         <p class="text-white">Gemaakt door Job Vink</p>
         <div class="flex space-x-4">
             <a class="w-8 h-8 rounded-full block bg-white text-center leading-8" target="_blank"
