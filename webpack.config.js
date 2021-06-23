@@ -24,6 +24,7 @@ const config = {
             patterns: [
                 {from:'./src/img', to: './img'},
                 {from: './src/fonts', to: './fonts'},
+                {from: './src/projects', to: './projects'}
             ]
         }),
         new MiniCssExtractPlugin(),

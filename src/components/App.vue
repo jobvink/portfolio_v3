@@ -68,6 +68,7 @@
                          v-if="visibleModal === modal.id"
                          v-on:close="visibleModal = false"
                          v-bind:content="modal.content"
+                         v-bind:extra="modal.extra"
         />
     </main>
 </template>
@@ -106,18 +107,6 @@ export default {
                     image: 'img/portfolio/durf_home.png'
                 },
                 {
-                    id: 4,
-                    title: 'Pedicure',
-                    description: 'Persoonlijke website',
-                    image: 'img/portfolio/mod6_front.jpg'
-                },
-                {
-                    id: 5,
-                    title: 'Baat bij bewind',
-                    description: 'Persoonlijke website',
-                    image: 'img/portfolio/mod5_front.png'
-                },
-                {
                     id: 6,
                     title: 'IoT selution in de retail',
                     description: 'Een slimme kledinghanger',
@@ -144,160 +133,30 @@ export default {
             ],
             modals: [
                 {
-                    id: 8, content: '<h2>Interactive website NOS</h2>' +
-                        '<p>Een kijkje in Noord-Korea.</p>' +
-                        '<img src="img/portfolio/mod2_1.png" alt="">' +
-                        '<p>Bij dit project moesten we in opdracht van de NOS een interactieve website maken. De' +
-                        '    visie van de NOS is om bepaalde verhalen en nieuwsitems uitgebreid uit te lichten in' +
-                        '    wat de NOS \'specials\' noemt. Dit zijn uitgebreide verhalen waar af en toe een' +
-                        '    interactief element in zit. Een voorbeeld van zo\'n interactief verhaal is: ' +
-                        '<a href="http://lab.nos.nl/projects/drugs/">"Het DNA van MDMA"</a> van de NOS.</p>' +
-                        '<p>Wij kregen de opdracht om zo\'n \'special\' te maken. We kregen als onderwerp een verhaal' +
-                        '    over Noord-Korea. Dit is een land waar een totale dictatuur heerst. Wij hebben dezn' +
-                        '    sfeer in onze website naar voren laten komen door na te denken over bijvoorbeeld het' +
-                        '    kleurgebruik. Daarbij hebben we alle aandachtspunten naar voren laten komen door dit' +
-                        '    kleurgebruik toe te passen.</p>'
+                    id: 8, content: 'projects/nos.md'
                 },
                 {
-                    id: 9, content: '<h2>Specialisatie project</h2>\n' +
-                        '<p>Een reis door het spijsverteringsstelsel.</p>\n' +
-                        '<img src="img/portfolio/mod1_1.jpg" alt=""/>\n' +
-                        '<p>Het eerste project dat ik in mijn opleiding gedaan heb, was een project in opdracht van\n' +
-                        '    het Boerhaave Museum in Leiden. Wij kregen de opdracht om een interactieve installatie\n' +
-                        '    te bouwen voor kinderen tussen de 10 en 14 jaar. Het thema van onze installatie moest\n' +
-                        '    gezondheid en lichaam zijn. Mijn projectgroepje heeft er voor gekozen om een reis\n' +
-                        '    door het spijsverteringsstelsel te maken.</p>\n' +
-                        '<p>Bij dit project hebben wij intensief nagedacht over de gebruiksvriendelijkheid van onze\n' +
-                        '    installatie. Ons doel was om het de kinderen zo makkelijk mogelijk te maken. Dit hebben\n' +
-                        '    we gedaan door sterk in te zetten op de gebruiksvriendelijkheid van onze\n' +
-                        '    installatie.</p>\n' +
-                        '<iframe width="560" height="315" src="https://www.youtube.com/embed/7NHE-gKHsx8"\n' +
+                    id: 9,
+                    content: '/projects/specialisatie_project.md',
+                    extra: '<iframe class="mx-auto my-8" width="560" height="315" src="https://www.youtube.com/embed/7NHE-gKHsx8" frameborder="0" allowfullscreen></iframe>'
+                },
+                {
+                    id: 7, content: 'projects/vr.md'
+                },
+                {
+                    id: 6,
+                    content: 'projects/iot.md',
+                    extra: '<iframe class="mx-auto my-8" width="560" height="315" src="https://www.youtube.com/embed/gI9ETe90ML4"\n' +
                         '        frameborder="0" allowfullscreen></iframe>'
                 },
                 {
-                    id: 7, content: '<h2>Virtual reality</h2>\n' +
-                        '<p>Ervaar het echte werk.</p>\n' +
-                        '<img src="img/portfolio/mod3_1.jpg" alt="">\n' +
-                        '<h3><a href="resources/vr/index.html">Bekijk de website (alleen op firefox)</a></h3>\n' +
-                        '<p>Voor mijn derde project als student bij de Hogeschool Leiden moesten wij een\n' +
-                        '    web-applicatie voor virtual reality maken.</p>\n' +
-                        '<p>Mijn projectgenoot en ik hebben besloten om een fietsenwinkel na te bootsen in virtual\n' +
-                        '    reality. Het idee achter ons concept was dat je dan het product kunt ervaren zoals het in\n' +
-                        '    het werkelijk is.</p>\n' +
-                        '<p>Voor dit project hebben we met A-frame gewerkt. A-frame is een framework gebouwd voor\n' +
-                        '    virtual reality in een web omgeving.</p>'
+                    id: 3, content: 'projects/durf.md'
                 },
                 {
-                    id: 6, content: '<h2>IoT selution in de retail</h2>\n' +
-                        '<p>Een slimme kledinghanger.</p>\n' +
-                        '<img src="img/portfolio/mod4_1.jpg" alt="">\n' +
-                        '<p>Voor dit project moesten wij een installatie maken voor een winkel. Wij kwamen met het\n' +
-                        '    idee om een slimme kleding-hanger te maken. Het idee was dat de consument zijn maat in\n' +
-                        '    kan voeren op het kledingrek, vervolgens licht het lampje van de ingevoerde maat op bij\n' +
-                        '    de hanger, zodat de consument direct weet waar zijn maat hangt.</p>\n' +
-                        '<p>De concurrentie van de webshops is tegenwoordig groot. Fysieke winkels kunnen daarom\n' +
-                        '    minder personeel inhuren. Het is daarom erg belangrijk om consumenten snel te helpen,\n' +
-                        '    zodat het personeel dat er wel staat zo veel mogelijk mensen kunnen helpen.</p>\n' +
-                        '<iframe width="560" height="315" src="https://www.youtube.com/embed/gI9ETe90ML4"\n' +
-                        '        frameborder="0" allowfullscreen></iframe>'
+                    id: 2, content: 'projects/tvgids.md'
                 },
                 {
-                    id: 5, content: '<h2>Baat bij bewind</h2>\n' +
-                        '<img src="img/portfolio/mod5_1.png" alt="Baat bij bewind banner">\n' +
-                        '<h3><a target="_blank" href="https://baatbijbewind.nl">Bekijk de website</a></h3>\n' +
-                        '<p>Deze website heb ik gemaakt voor mijn oom die zzp’er is, en een eigen bedrijf heeft in\n' +
-                        '    bewindvoering. Het is\n' +
-                        '    belangrijk dat zzp’ers zichtbaar zijn op het internet. Dit kan behaald worden door gebruik te\n' +
-                        '    maken van\n' +
-                        '    search engine optimization.</p>\n' +
-                        '<p>Een andere handige tip waar ik gebruik van gemaakt heb om deze website zichtbaar te maken op\n' +
-                        '    Google is door\n' +
-                        '    het bedrijf van deze klant toe te voegen aan google maps via google’s local guide programma. Op\n' +
-                        '    deze manier\n' +
-                        '    wordt het bedrijf direct zichtbaar als de naam ingetypt wordt op Google. Je moet ook leren\n' +
-                        '    letten op\n' +
-                        '    kleinere details. Google geeft bijvoorbeeld voorrang aan websites die alleen bereikbaar zijn met\n' +
-                        '    https.</p>\n' +
-                        '<img src="img/portfolio/mod5_2.png" alt="Google baat bij bewind">'
-                },
-                {
-                    id: 4, content: '<h2>Pedicuren</h2>\n' +
-                        '<img src="img/portfolio/mod6_1.jpg" alt="Baat bij bewind banner">\n' +
-                        '<h3><a target="_blank" href="https://tenen-voeten.nl">Bekijk de website</a></h3>\n' +
-                        '<p>Deze website heb ik gemaakt voor mijn tante. Mijn tante is pedicure, voor haar is het belangrijk\n' +
-                        '    dat haar\n' +
-                        '    website de mogelijkheid biedt om informatie te geven over wat ze doet en wat bijvoorbeeld de\n' +
-                        '    tarieven van\n' +
-                        '    haar praktijk zijn. Ook is het erg belangrijk dat potentiele klanten gemakkelijk contact met\n' +
-                        '    haar kunnen\n' +
-                        '    leggen. Dit proces kun je verbeteren door kleine dingetjes iets gebruiksvriendelijker te maken,\n' +
-                        '    door\n' +
-                        '    bijvoorbeeld het telefoonnummer klikbaar te maken, zodat de klant direct op het nummer kan\n' +
-                        '    klikken als deze\n' +
-                        '    op zijn of haar mobiel de website bezoekt.</p>'
-                },
-                {
-                    id: 3, content: '<h2>Durf</h2>\n' +
-                        '<img src="img/portfolio/durf_home.png" alt="Homepagina durfkatwijk">\n' +
-                        '<p>Begin 2018 waren er gemeenteraadsverkiezingen. Een van de deelnemende partijen bij de\n' +
-                        '    verkiezingen in mijn\n' +
-                        '    dorp was DURF. Deze partij is opgericht door een oude schoolvriend van mij. De website van deze\n' +
-                        '    partij kon\n' +
-                        '    wel wat verbeterpunten gebruiken. Ik heb mijn hulp aangeboden en ben sindsdien verantwoordelijk\n' +
-                        '    voor het\n' +
-                        '    beheer van de website van de partij.</p>\n' +
-                        '<p>Het meest interessante aan dit project vond ik de wijze waarmee ik de doelgroep heb bepaald. Aan\n' +
-                        '    het begin\n' +
-                        '    van het project had ik moeite met het inschatten van de doelgroep, omdat de partij nog niet\n' +
-                        '    eerder mee had\n' +
-                        '    gedaan aan de verkiezingen en dus nog geen statistiek had van welke mensen in Katwijk op DURF\n' +
-                        '    stemden.\n' +
-                        '    Daarom heb ik gekeken naar die demografie van Katwijk en heb ik vervolgens gekeken naar de\n' +
-                        '    Google analytics\n' +
-                        '    om de doelgroep beter te definiëren. Door deze iteratieve manier van werken kon ik een veel\n' +
-                        '    betere website\n' +
-                        '    neer zetten.</p>\n' +
-                        '<img src="img/portfolio/durf_google_analytics.png" alt="Statestiek durfkatijk">\n' +
-                        '<p>Ik heb deze website gebouwd in php met het symfonie framework.</p>\n' +
-                        '<a target="_blank" class="close btn btn--default" href="https://durfkatwijk.nl">Bekijk de\n' +
-                        '    website</a>'
-                },
-                {
-                    id: 2, content: '<h2>TVgids.nl</h2>\n' +
-                        '<img src="img/portfolio/tvgids_home.png" alt="Homepagina van tvgids.nl">\n' +
-                        '<p>Bij isource is één van de projecten waar ik aan gewerkt heb het vernieuwen van tvgids.nl. Dit is\n' +
-                        '    één van de\n' +
-                        '    meest bezochte Nederlandse websites. Ik ben ook erg trots dat ik hier aan mee heb mogen\n' +
-                        '    werken.</p>\n' +
-                        '<p>Binnen het project ben ik verantwoordelijk geweest voor de frontend van de website. Toen we de\n' +
-                        '    ontwerpen\n' +
-                        '    binnen kregen bij isource kon ik ook niet wachten om de verschillende componenten uit te\n' +
-                        '    denken.</p>\n' +
-                        '<img src="img/portfolio/tvgids_component.png" alt="Component uit tvgids.nl">\n' +
-                        '<p>Binnen het project hebben we er bijvoorbeeld voor gekozen om te werken met scss en een vaste\n' +
-                        '    naamgeving van\n' +
-                        '    classes aan te houden. De methode die we aangehouden hebben heet BEM en zorgt ervoor dat er niet\n' +
-                        '    alleen\n' +
-                        '    beter nagedacht wordt over de structuur van html, maar dat er ook nagedacht wordt over\n' +
-                        '    herbruikbare\n' +
-                        '    componenten.</p>\n' +
-                        '<img src="img/portfolio/BEM.png" style="width: 400px" alt="BEM methode">\n' +
-                        '<h3><a href="https://tvgids.nl">Bekijk de website</a></h3>'
-                },
-                {
-                    id: 1, content: '<h2>Floating lab</h2>\n' +
-                        '<img src="img/portfolio/floating_lab_boat.jpg" alt="RPA 3">\n' +
-                        '<p>Voor mijn minor Data Analytics ben ik bezig met een project in samenwerking met Port of\n' +
-                        '    Rotterdam, om een\n' +
-                        '    boot autonoom te laten varen</p>\n' +
-                        '<p>Hiervoor zijn we bezig met vraagstukken zoals, hoe herken je de kade op camerabeelden en hoe\n' +
-                        '    herken je andere\n' +
-                        '    boten die om je heen varen.</p>\n' +
-                        '<p>Hieronder zie je een filmpje waarin te zien is hoe ons algoritme met computervision herkent waar\n' +
-                        '    de kade\n' +
-                        '    is.</p>\n' +
-                        '<img src="img/portfolio/floating_lab_demo.gif" alt="Demo van kade herkenning">\n' +
-                        '<p>Ook ben ik bij mijn minor bezig met andere cutting edge technologieën zoals Neural Networks.</p>'
+                    id: 1, content: 'projects/port_of_rotterdam.md'
                 }
             ],
             timeline: [

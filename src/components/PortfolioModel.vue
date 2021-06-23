@@ -12,8 +12,8 @@
             <div
                 class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-6xl sm:w-full">
                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                    <div class="prose block mx-auto" v-html="content">
-                    </div>
+                    <div class="prose block mx-auto" v-html="html"></div>
+                    <div class="block mx-auto" v-if="extra" v-html="extra"></div>
                 </div>
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                     <button type="button"
@@ -28,7 +28,20 @@
 </template>
 
 <script>
+import {markdown} from 'markdown';
+import axios from 'axios';
+
 export default {
-    props: ['content']
+    props: ['content', 'extra'],
+    data() {
+        return {
+            html: undefined
+        }
+    },
+    created() {
+        axios.get(this.content).then((result) => {
+            this.html = markdown.toHTML(result.data);
+        })
+    },
 }
 </script>
