@@ -8,5 +8,5 @@ om je heen varen.
 
 Hieronder zie je een filmpje waarin te zien is hoe ons algoritme met computervision herkent waar de kade is.
 
-![Demo van kade herkenning](mg/portfolio/floating_lab_demo.gif "Demo van kade herkenning")
+![Demo van kade herkenning](img/portfolio/floating_lab_demo.gif "Demo van kade herkenning")
 Ook ben ik bij mijn minor bezig met andere cutting edge technologieën zoals Neural Networks
